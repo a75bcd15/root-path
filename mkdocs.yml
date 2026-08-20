@@ -1,0 +1,34 @@
+site_name: Root Path
+theme:
+  name: terminal
+  palette: pink
+
+nav:
+  - Главная: index.md
+  - Компьютерные сети:
+    - Модель OSI: net/md/osi--tcp-ip.md
+    - Оборудование: net/md/net-equip.md
+    - Топологии: net/md/topologies.md
+    - Сетевой трафик: net/md/net-trffc.md
+    - Протокол: net/md/protocol.md
+    - Порт: net/md/port.md
+    - Анализатор пакетов: net/md/sniffer.md
+    - Беспроводные сети: net/md/wlan.md
+    - ARP: net/md/arp.md
+    - ICMP: net/md/icmp.md
+    - IP: net/md/ip.md
+    - TCP: net/md/tcp.md
+    - UDP: net/md/udp.md
+    - SSH: net/md/ssh.md
+    - DHCP: net/md/dhcp.md
+    - DNS: net/md/dns.md
+    - HTTP: net/md/http.md
+    - SMTP: net/md/smtp.md
+    - ping: net/md/ping.md
+    - traceroute: net/md/traceroute.md
+    - wireshark: net/md/wireshark.md
+    - tcpdump: net/md/tcpdump-tshark.md
+    - nmap: net/md/nmap.md
+  - Прочее:
+    - Git: uwu/git.md
+    - Виртуальные машины: uwu/vm.md
