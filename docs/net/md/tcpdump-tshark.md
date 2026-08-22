@@ -1,21 +1,27 @@
 # Перехват пакетов из командной строки
 [**tcpdump**](https://www.tcpdump.org/manpages/tcpdump.1.html) и [**tshark**](https://www.wireshark.org/docs/man-pages/tshark.html) — утилиты командной строки для захвата и анализа пакетов в компьютерных сетях.
+
 ## Перехват и сохранение пакетов
 Начать захват пакетов для вывода в терминал:
+
 - `tshark` для Windows
 - `tcpdump` для Linux
 
 Вывести список доступных интерфейсов:
+
 - `tshark -D`
 - `ifconfig`
 
 Начать захват на определённом интерфейсе:
+
 - `tshark -i №` 
 - `tcpdump -i eth№`
 
 Сохранить захваченные пакеты:
+
 - `tshark -i № -w filename.pcap` 
 - `tcpdump -i eth№ -w filename.pcap`
+
 ## Чтение перехваченных пакетов
 В пакетах ТСР применяется следующий формат:
 ```
@@ -34,19 +40,23 @@
 [Протокол четвертого уровня], [Длина данных]
 ```
 Прочитать файл перехвата:
+
 - `tshark -r filename.pcap` 
 - `tcpdump -r filename.pcap`
 - -c10 : прочитать (захватить) первые 10 пакетов
 
 Прочитать подробные итоговые сведения:
+
 - `tshark -r filename.pcap -V`
 - `tcpdump -r filename.pcap -v`
 
 Прочитать ещё в коде ASCII:
+
 - `tshark -xr filename.pcap`
 - `tcpdump -Xr filename.pcap`
 
 Отменить преобразование имен:
+
 -  `tshark -i № -N#`
 - m - Преобразование МАС-адресов
 - n - Преобразование сетевых адресов
@@ -56,21 +66,27 @@
 -  `tcpdump -nni eth№`
 - -n преобразование IP-адресов;
 - -nn преобразование номеров портов.
+
 ## Применение фильтров
 Указать фильтр перехвата:
+
 - `tshark -ni 1 -w packets.pcap -f "tcp port 80"`
 
 Указать фильтр отображения:
+
 - `tshark -ni 1 -w packets.pcap -Y "tcp.dstport == 80"`
 - `tshark -r packets.pcap -Y "tcp.dstport == 80"`
 - `tcpdump -nni eth0 -w packets.pcap 'tcp dst port 80'`
 - `tcpdump -r packets.pcap 'tcp dst port 80'`
 
 Создать подмножество:
+
 - `tcpdump -r packets.pcap 'tcp dst port 80' -w http_packets.pcap`
 
 Обратиться к файлу типа BPF с готовыми фильтрами:
+
 - `tcpdump -nni eth0 -F dns_servers.bpf`
+
 ## Отображение времени и статистика в TShark
 `tshark -r filename.pcap -t ad` абсолютные отметки времени
 
@@ -88,6 +104,7 @@
 `tshark -z help` информация по возможным столбцам статистики
 
 Некоторые **варианты вывода** статистических данных:
+
 - `ip_hosts, tree` Отображает каждый IP-адрес из файла перехвата наряду с интенсивностью и долями в процентах сетевого трафика, приходящегося на каждый адрес.
 - `io,phs` Отображает иерархию всех сетевых протоколов, обнаруженных в файле перехвата.
 - `http, tree` Отображает статистические данные, касающиеся HTTP-запросов и ответов.
