@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Owasp 10 - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../uwu/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../uwu/">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">основные атаки</a></li>
+        <li><a href="#identification-and-authentication-failure">Identification and Authentication Failure Ошибка идентификации и аутентификации</a></li><li><a href="#broken-access-control">Broken Access Control Ошибка контроля доступа</a></li><li><a href="#injection">Injection Инъекция</a></li><li><a href="#cryptographic-failures">Cryptographic Failures Криптографические сбои</a></li><li><a href="#broken-authentication">Broken Authentication Нарушение аутентификации</a></li><li><a href="#sensitive-data-exposure">Sensitive Data Exposure Незащищенность критичных данных</a></li><li><a href="#xml-external-entities-xxe-xml">XML External Entities (XXE) Внешние объекты XML</a></li><li><a href="#using-components-with-known-vulnerabilities">Using Components with Known Vulnerabilities</a></li><li><a href="#insufficient-logging-monitoring">Insufficient Logging &amp; Monitoring Недостаточное ведение журнала и мониторинг</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p>веб-приложения удобны в использовании, так как они требуют только подключение к интернету и установленный браузер на компьютере. веб-приложения бывают в виде почты, онлайн магазина, офисных программ, игр и т.д. при этом они все расположены на удалённых серверах, которые хранят большие массивы информации в базах данных. компании нанимают людей, чтобы находить уязвимости в своей системе, где пользователь обращается с запросом к серверу и получает от него ответ.</p>
+<h1 id="_1">основные атаки</h1>
+<p>Open Web Application Security Project <a href="https://owasp.org/www-project-top-ten/">(OWASP)</a> - открытый проект обеспечения безопасности веб-приложений имеет список из уязвимостей, которые могут присутствовать в веб-приложении, некоторые из них:</p>
+<h2 id="identification-and-authentication-failure">Identification and Authentication Failure   Ошибка идентификации и аутентификации</h2>
+<p>включает в себя полный перебор (брутфорс), слабые пароли, которые легко угадать, хранение паролей в открытом виде.</p>
+<h2 id="broken-access-control">Broken Access Control Ошибка контроля доступа</h2>
+<p>включает в себя нарушение принципа минимальных привилегий, редактирование чужих профилей рядовым пользователем, запуск тех веб-страниц без предварительной авторизации, которые того должны требовать.</p>
+<ol>
+<li>Direct Object References (IDOR) Прямые ссылки на объекты подразумевают под собой, когда веб-приложение не проверяет, есть ли у пользователя разрешение на доступ к запрошенному объекту.</li>
+</ol>
+<h3 id="security-misconfiguration">Security Misconfiguration Небезопасная конфигурация</h3>
+<p>Неправильная настройка системы безопасности (например, небезопасная конфигурация по умолчанию, неправильно настроенные HTTP-заголовки или подробные сообщения об ошибках) могут предоставить злоумышленникам ценную информацию для использования уязвимостей, например, возможна кража cookie.</p>
+<h3 id="cross-site-scripting-xss">Cross-Site Scripting (XSS) Межсайтовый скриптинг</h3>
+<p>подразумевает возможность злоумышленникам запускать вредоносные JavaScript в браузере пользователя, что приводит к захвату учетной записи, повреждению или перенаправлению на вредоносные сайты.</p>
+<h3 id="insecure-deserialization">Insecure Deserialization Небезопасная десериализация,</h3>
+<p>признающаяся одним из серьезнейших современных элементов атак на веб-приложения, особенно, в отношении Java-десериализации. может позволить злоумышленнику выполнять произвольный код, проводить атаки путем внедрения, повышать привилегии или выполнять другие вредоносные действия.</p>
+<h2 id="injection">Injection Инъекция</h2>
+<p>представляет из себя ввод специальных символов или слов в поле ввода или в ссылку страницы с целью получения скрытой информации или доступа к базам данных сервера. (примеры: SQL, NoSQL, or OS command)</p>
+<p>можно снизить риски через использование хранимых процедур, регулярных выражений, подготовленных запросов, ограничения прав на доступ к базам данных.</p>
+<h2 id="cryptographic-failures">Cryptographic Failures Криптографические сбои</h2>
+<p>связаны с нарушением процесса шифрования и дешифрования передаваемой по сети информации, включают в себя использование протоколов, которые не шифруют передаваемые данные, слабых алгоритмов шифрования, простых и легко угадываемых секретных ключей шифрования.</p>
+<h2 id="broken-authentication">Broken Authentication Нарушение аутентификации</h2>
+<p>позволяет скомпрометировать пароли, ключи или токены сеанса или использовать другие недостатки реализации для присвоения идентификационных данных пользователей.</p>
+<p>можно снизить риски через проверку IP-адреса сессий, или наличие множества соединений в одной сессии.</p>
+<h2 id="sensitive-data-exposure">Sensitive Data Exposure Незащищенность критичных данных</h2>
+<p>Доступ к конфиденциальным данным в сфере финансов, медицины или персональных данных позволит злоумышленникам украсть или модифицировать эти данные для совершения преступлений, таких как кража личных данных или мошенничество с кредитными картами.</p>
+<p>можно снизить риски через использование сайтов https для шифрования вводимых данных, а также SSL-сертификаты с зеленой полосой.</p>
+<h2 id="xml-external-entities-xxe-xml">XML External Entities (XXE) Внешние объекты XML</h2>
+<p>Плохо настроенные анализаторы XML могут быть уязвимы для атак внешних объектов, позволяя злоумышленникам получать несанкционированный доступ к данным, выполнять подделку запросов на стороне сервера (SSRF server-side request forgery) или запускать атаки типа "отказ в обслуживании" (DoS denial-of-service).</p>
+<p>надо использовать анализаторы статического кода для поиска XXE или IAST (англ. Interactive Application Security Testing), т.е. интерактивные анализаторы выполнения программ, применять WAF, использовать менее сложные форматы данных, такие как JSON и проверки XSD и т.д.</p>
+<h2 id="using-components-with-known-vulnerabilities">Using Components with Known Vulnerabilities</h2>
+<p>Использование компонентов (приложения и API-интерфейсы) с известными уязвимостями могут скомпрометировать систему. </p>
+<h2 id="insufficient-logging-monitoring">Insufficient Logging &amp; Monitoring Недостаточное ведение журнала и мониторинг</h2>
+<p>в сочетании с недостаточной интеграцией в систему реагирования на инциденты позволяют злоумышленникам сохранять свое присутствие в системе, перемещаться в стороны и осуществлять эксфильтрацию или подделку данных.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>IP - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../uwu/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../uwu/">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#ip">IP</a></li>
+        <li><a href="#ttl">Время жизни пакета, TTL</a></li>
+        <li><a href="#cidr">Подсети и CIDR</a></li>
+        <li><a href="#local-host">local host</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="ip">IP</h1>
+<p>Internet Protocol или <strong>Межсетевой протокол</strong> позволяет взаимодействовать узлам, находящимся в разных локальных сетях. Существует 2 версии: <a href="../ipv4/"><strong>IPv4</strong></a> и <a href="../ipv6/"><strong>IPv6</strong></a>. Сравнить их можно с помощью <a href="../../etc/http_ip4and6.pcapng"><strong>этого файла pcapng</strong></a> через <a href="../wireshark/"><strong>WireShark</strong></a>.</p>
+<p>Узнать свой IP-адрес:</p>
+<ul>
+<li><code>ipconfig</code> в Windows;</li>
+<li><code>ifconfig</code>, <code>ip addr</code> в Linux.</li>
+</ul>
+<h1 id="ttl">Время жизни пакета, TTL</h1>
+<p>Величина <strong>времени жизни</strong>, или <strong>Тimе to Live - TTL</strong>, определяет период времени, которое может истечь, или максимальное количество маршрутизаторов, которые может пройти пакет, прежде чем он будет аннулирован. Мера необходима для предотвращения бесконечно перемещающихся пакетов, которые могут замедлить работу сети.</p>
+<h1 id="cidr">Подсети и CIDR</h1>
+<p>Роль подсети — разделить сеть на более мелкие диапазоны (сегменты). Подсеть определяет количество хостов внутри диапазона IP-адресов с помощью масок. Бесклассовая междоменная маршрутизация (Classless Interdomain Routing, CIDR) была создана для упрощения записи масок подсети.</p>
+<table>
+<thead>
+<tr>
+<th>CIDR</th>
+<th>МАСКА СЕТИ</th>
+<th>КОЛИЧЕСТВО ХОСТОВ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/30</td>
+<td>255.255.255.252</td>
+<td>2</td>
+</tr>
+<tr>
+<td>/29</td>
+<td>255.255.255.248</td>
+<td>6</td>
+</tr>
+<tr>
+<td>/28</td>
+<td>255.255.255.240</td>
+<td>14</td>
+</tr>
+<tr>
+<td>/27</td>
+<td>255.255.255.224</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/26</td>
+<td>255.255.255.192</td>
+<td>62</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>255.255.255.128</td>
+<td>126</td>
+</tr>
+<tr>
+<td>/24</td>
+<td>255.255.255.0</td>
+<td>254</td>
+</tr>
+<tr>
+<td>/23</td>
+<td>255.255.254.0</td>
+<td>510</td>
+</tr>
+<tr>
+<td>/22</td>
+<td>255.255.252.0</td>
+<td>1022</td>
+</tr>
+<tr>
+<td>/21</td>
+<td>255.255.248.0</td>
+<td>2046</td>
+</tr>
+<tr>
+<td>/20</td>
+<td>255.255.240.0</td>
+<td>4094</td>
+</tr>
+<tr>
+<td>/19</td>
+<td>255.255.224.0</td>
+<td>8190</td>
+</tr>
+<tr>
+<td>/18</td>
+<td>255.255.192.0</td>
+<td>16382</td>
+</tr>
+<tr>
+<td>/17</td>
+<td>255.255.128.0</td>
+<td>32766</td>
+</tr>
+<tr>
+<td>/16</td>
+<td>255.255.0.0</td>
+<td>65534</td>
+</tr>
+<tr>
+<td>/15</td>
+<td>255.254.0.0</td>
+<td>131070</td>
+</tr>
+<tr>
+<td>/14</td>
+<td>255.252.0.0</td>
+<td>262142</td>
+</tr>
+<tr>
+<td>/13</td>
+<td>255.248.0.0</td>
+<td>524286</td>
+</tr>
+<tr>
+<td>/12</td>
+<td>255.240.0.0</td>
+<td>1048574</td>
+</tr>
+<tr>
+<td>/11</td>
+<td>255.224.0.0</td>
+<td>2097150</td>
+</tr>
+<tr>
+<td>/10</td>
+<td>255.192.0.0</td>
+<td>4194302</td>
+</tr>
+<tr>
+<td>/9</td>
+<td>255.128.0.0</td>
+<td>8288606</td>
+</tr>
+<tr>
+<td>/8</td>
+<td>255.0.0.0</td>
+<td>16777216</td>
+</tr>
+</tbody>
+</table>
+<p>Существует также технология масок переменной длины <strong>VLSM(Variable Length Subnet Mask)</strong>, которая позволяет выстроить иерархии сетей и подсетей, а так же объединять их.</p>
+<h1 id="local-host">local host</h1>
+<p><strong>Localhost</strong> (также известный как <strong>loopback address</strong>) - термин, используемый для определения сетевого адреса, который используется устройством для обозначения самого себя. Способ устройства установить сетевое подключение к самому себе. <code>127.0.0.1</code> зарезервирован в качестве адреса обратной связи в сетях IPv4, для сетей IPv6 он представлен в виде <code>::1</code>.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

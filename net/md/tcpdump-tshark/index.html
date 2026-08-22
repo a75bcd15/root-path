@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Перехват пакетов из командной строки - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../uwu/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../uwu/">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Перехват пакетов из командной строки</a></li>
+        <li><a href="#_2">Перехват и сохранение пакетов</a></li><li><a href="#_3">Чтение перехваченных пакетов</a></li><li><a href="#_4">Применение фильтров</a></li><li><a href="#tshark">Отображение времени и статистика в TShark</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="_1">Перехват пакетов из командной строки</h1>
+<p><a href="https://www.tcpdump.org/manpages/tcpdump.1.html"><strong>tcpdump</strong></a> и <a href="https://www.wireshark.org/docs/man-pages/tshark.html"><strong>tshark</strong></a> — утилиты командной строки для захвата и анализа пакетов в компьютерных сетях.</p>
+<h2 id="_2">Перехват и сохранение пакетов</h2>
+<p>Начать захват пакетов для вывода в терминал:</p>
+<ul>
+<li><code>tshark</code> для Windows</li>
+<li><code>tcpdump</code> для Linux</li>
+</ul>
+<p>Вывести список доступных интерфейсов:</p>
+<ul>
+<li><code>tshark -D</code></li>
+<li><code>ifconfig</code></li>
+</ul>
+<p>Начать захват на определённом интерфейсе:</p>
+<ul>
+<li><code>tshark -i №</code> </li>
+<li><code>tcpdump -i eth№</code></li>
+</ul>
+<p>Сохранить захваченные пакеты:</p>
+<ul>
+<li><code>tshark -i № -w filename.pcap</code> </li>
+<li><code>tcpdump -i eth№ -w filename.pcap</code></li>
+</ul>
+<h2 id="_3">Чтение перехваченных пакетов</h2>
+<p>В пакетах ТСР применяется следующий формат:</p>
+<pre><code>[Отметка времени] [Протокол третьего уровня]
+[ІР-адрес отправителя].[Порт отправителя] &gt;
+[ІР-адрес получателя].[Порт получателя]:
+[Флаги протокола ТСР], [Порядковый номер в протоколе ТСР),
+[Номер подтверждения в протоколе ТСР],
+[Размеры окон в протоколе ТСР], [Длина данных]
+</code></pre>
+<p>В пакетах UDP применяется такой формат:</p>
+<pre><code>[Отметка времени] [Протокол третьего уровня]
+[ІР-адрес отправителя].[Порт отправителя] &gt;
+[ІР-адрес получателя]. [Порт получателя]:
+[Протокол четвертого уровня], [Длина данных]
+</code></pre>
+<p>Прочитать файл перехвата:</p>
+<ul>
+<li><code>tshark -r filename.pcap</code> </li>
+<li><code>tcpdump -r filename.pcap</code></li>
+<li>-c10 : прочитать (захватить) первые 10 пакетов</li>
+</ul>
+<p>Прочитать подробные итоговые сведения:</p>
+<ul>
+<li><code>tshark -r filename.pcap -V</code></li>
+<li><code>tcpdump -r filename.pcap -v</code></li>
+</ul>
+<p>Прочитать ещё в коде ASCII:</p>
+<ul>
+<li><code>tshark -xr filename.pcap</code></li>
+<li><code>tcpdump -Xr filename.pcap</code></li>
+</ul>
+<p>Отменить преобразование имен:</p>
+<ul>
+<li><code>tshark -i № -N#</code></li>
+<li>m - Преобразование МАС-адресов</li>
+<li>n - Преобразование сетевых адресов</li>
+<li>t - Преобразование номеров портов на транспортном уровне</li>
+<li>N - Применение внешних преобразователей сетевых имен</li>
+<li>С - Выполнение параллельного поиска в службе DNS</li>
+<li><code>tcpdump -nni eth№</code></li>
+<li>-n преобразование IP-адресов;</li>
+<li>-nn преобразование номеров портов.</li>
+</ul>
+<h2 id="_4">Применение фильтров</h2>
+<p>Указать фильтр перехвата:</p>
+<ul>
+<li><code>tshark -ni 1 -w packets.pcap -f "tcp port 80"</code></li>
+</ul>
+<p>Указать фильтр отображения:</p>
+<ul>
+<li><code>tshark -ni 1 -w packets.pcap -Y "tcp.dstport == 80"</code></li>
+<li><code>tshark -r packets.pcap -Y "tcp.dstport == 80"</code></li>
+<li><code>tcpdump -nni eth0 -w packets.pcap 'tcp dst port 80'</code></li>
+<li><code>tcpdump -r packets.pcap 'tcp dst port 80'</code></li>
+</ul>
+<p>Создать подмножество:</p>
+<ul>
+<li><code>tcpdump -r packets.pcap 'tcp dst port 80' -w http_packets.pcap</code></li>
+</ul>
+<p>Обратиться к файлу типа BPF с готовыми фильтрами:</p>
+<ul>
+<li><code>tcpdump -nni eth0 -F dns_servers.bpf</code></li>
+</ul>
+<h2 id="tshark">Отображение времени и статистика в TShark</h2>
+<p><code>tshark -r filename.pcap -t ad</code> абсолютные отметки времени</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Значение</th>
+<th style="text-align: left;">Отметка времени</th>
+<th style="text-align: left;">Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">Абсолютное время перехвата пакета (в текущем часовом поясе)</td>
+<td style="text-align: left;">15:47:58.004669</td>
+</tr>
+<tr>
+<td style="text-align: left;">ad</td>
+<td style="text-align: left;">Абсолютное время перехвата пакета с указанием даты (в текущем часовом поясе)</td>
+<td style="text-align: left;">2015-10-09 15:47:58.004669</td>
+</tr>
+<tr>
+<td style="text-align: left;">d</td>
+<td style="text-align: left;">Разница во времени с предыдущим перехваченным пакетом</td>
+<td style="text-align: left;">0.000140</td>
+</tr>
+<tr>
+<td style="text-align: left;">dd</td>
+<td style="text-align: left;">Разница во времени с предыдущим отображённым пакетом</td>
+<td style="text-align: left;">0.000140</td>
+</tr>
+<tr>
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">Время с начала эпохи Unix (1 января 1970 г., UTC)</td>
+<td style="text-align: left;">1444420078.004669</td>
+</tr>
+<tr>
+<td style="text-align: left;">r</td>
+<td style="text-align: left;">Время, прошедшее между первым и текущим пакетом</td>
+<td style="text-align: left;">0.000140</td>
+</tr>
+<tr>
+<td style="text-align: left;">u</td>
+<td style="text-align: left;">Абсолютное время перехвата пакета (в формате UTC)</td>
+<td style="text-align: left;">19:47:58.004669</td>
+</tr>
+<tr>
+<td style="text-align: left;">ud</td>
+<td style="text-align: left;">Абсолютное время перехвата пакета с указанием даты (в формате UTC)</td>
+<td style="text-align: left;">2015-10-09 19:47:58.004669</td>
+</tr>
+</tbody>
+</table>
+<p><code>tshark -z help</code> информация по возможным столбцам статистики</p>
+<p>Некоторые <strong>варианты вывода</strong> статистических данных:</p>
+<ul>
+<li><code>ip_hosts, tree</code> Отображает каждый IP-адрес из файла перехвата наряду с интенсивностью и долями в процентах сетевого трафика, приходящегося на каждый адрес.</li>
+<li><code>io,phs</code> Отображает иерархию всех сетевых протоколов, обнаруженных в файле перехвата.</li>
+<li><code>http, tree</code> Отображает статистические данные, касающиеся HTTP-запросов и ответов.</li>
+<li><code>http_req, tree</code> Отображает статистические данные по каждому НТТР-запросу.</li>
+<li><code>smb, srt</code> Отображает статистические данные по командам протокола ЅМВ для анализа обмена данными по сети в Windows.</li>
+<li><code>endpoints,wlan</code> Отображает статистические данные о конечных точках в беспроводной сети.</li>
+<li><code>expert</code> Отображает экспертную информацию (диаграммы, ошибки и прочее) из файла перехвата.</li>
+</ul>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

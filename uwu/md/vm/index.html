@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Vm - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#what-is-virtual-machine">What is Virtual Machine</a></li>
+        <li><a href="#virt-manager-qemukvm-arch">Настройка Virt-Manager для QEMU/KVM на Arch</a></li><li><a href="#virsh">Команды virsh для работы из консоли</a></li><li><a href="#_1">Режимы сетевого адаптера</a></li><li><a href="#ssh">Доступ к ВМ по SSH</a></li>
+        <li><a href="#ufw">UFW</a></li>
+        <li><a href="#ssh_1">Настройка файрвола только на SSH</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h2 id="what-is-virtual-machine">What is Virtual Machine</h2>
+<p>Виртуальная машина имитирует реальный физический компьютер со своим процессором, памятью, жестким диском и сетевой картой, что позволяет запустить отдельную операционную систему внутри себя. </p>
+<p>Гипервизор представляет из себя программное обеспечение, которое берет ресурсы физического компьютера (хоста) и распределяет их между виртуальными машинами (гостями). Гипервизоры бывают двух типов. Первый устанавливается на голом железе, имеет прямой доступ к железу, что обеспечивает максимальную скорость и стабильность. Примеры: VMware ESXi, Microsoft Hyper-V, Proxmox VE. Второй тип устанавливается как обычная программа внутри пользовательской операционной системы. Может работать медленнее из-за того, что делит ресурсы с другими программами. Примеры: Oracle VirtualBox, VMware Workstation.</p>
+<p>KVM (Kernel-based Virtual Machine) являктся модулем ядра Linux, который превращает операционную систему Linux в гипервизор 1-го типа. KVM берет на себя управление процессором и памятью, задействуя аппаратную виртуализацию процессоров Intel (VT-x) и AMD (AMD-V). QEMU (Quick Emulator) это программа, которая эмулирует все остальные компоненты компьютера: материнскую плату, видеокарту, сетевые адаптеры, жесткие диски и USB-порты. Сам по себе KVM не умеет создавать полноценный компьютер, а QEMU без KVM работает очень медленно. Когда они объединяются в стек KVM/QEMU, KVM отвечает за быструю работу процессора на уровне ядра, а QEMU создает вокруг него виртуальное «железо». По умолчанию пользовательского интерфейса у стека нет, как у VirtualBox или VMware Workstation, потому управляется через консоль или <code>virt-manager</code>. </p>
+<h3 id="virt-manager-qemukvm-arch">Настройка Virt-Manager для QEMU/KVM на Arch</h3>
+<ul>
+<li>Установка необходимых пакетов (гипервизор, утилиты управления сетью и графический менеджер)</li>
+</ul>
+<pre><code class="language-bash">sudo pacman -S qemu-full virt-manager libvirt dnsmasq iptables-nft bridge-utils
+</code></pre>
+<ul>
+<li>Настройка прав доступа, чтобы управлять виртуальными машинами без sudo</li>
+</ul>
+<pre><code class="language-bash">sudo usermod -aG libvirt $USER
+</code></pre>
+<ul>
+<li>Запуск и включение служб</li>
+</ul>
+<pre><code class="language-bash">sudo systemctl enable --now libvirtd
+</code></pre>
+<ul>
+<li>Настройка сети по умолчанию</li>
+</ul>
+<pre><code class="language-bash">sudo virsh net-autostart default
+sudo virsh net-start default
+</code></pre>
+<h3 id="virsh">Команды virsh для работы из консоли</h3>
+<ul>
+<li><code>virsh list</code> — Показать список только работающих виртуальных машин.</li>
+<li><code>virsh list --all</code> — Показать все существующие виртуальные машины.</li>
+<li><code>virsh start &lt;имя_ВМ&gt;</code> — Включить виртуальную машину.</li>
+<li><code>virsh shutdown &lt;имя_ВМ&gt;</code> — Корректно выключить ВМ (отправляет сигнал ACPI).</li>
+<li><code>virsh destroy &lt;имя_ВМ&gt;</code> — Принудительно выключить.</li>
+<li><code>virsh reboot &lt;имя_ВМ&gt;</code> — Перезагрузить виртуальную машину.</li>
+<li><code>virsh autostart &lt;имя_ВМ&gt;</code> — Включить автоматический запуск ВМ при загрузке ПК.</li>
+<li><code>virsh autostart --disable &lt;имя_ВМ&gt;</code> — Отменить автозапуск машины.</li>
+<li><code>virsh edit &lt;имя_ВМ&gt;</code> — Открыть XML-конфигурацию машины для редактирования.</li>
+<li><code>virsh undefine &lt;имя_ВМ&gt;</code> — Удалить регистрацию ВМ из системы (сама конфигурация удалится, но файлы дисков останутся).</li>
+<li><code>virsh domifaddr &lt;имя_ВМ&gt;</code> — Узнать IP-адрес запущенной ВМ</li>
+</ul>
+<h3 id="_1">Режимы сетевого адаптера</h3>
+<table>
+<thead>
+<tr>
+<th>Критерий</th>
+<th>NAT (По умолчанию)</th>
+<th>Bridged (Мост)</th>
+<th>Host-only (Изолированная)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доступ в интернет из ВМ</td>
+<td>Да</td>
+<td>Да</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>ВМ видна из локальной сети</td>
+<td>Нет</td>
+<td>Да (как отдельный ПК)</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Где ВМ берет IP-адрес</td>
+<td>От гипервизора (libvirt)</td>
+<td>От роутера (DHCP)</td>
+<td>От внутренней службы хоста</td>
+</tr>
+<tr>
+<td>Безопасность для хоста</td>
+<td>Высокая</td>
+<td>Средняя (ВМ уязвима извне)</td>
+<td>Максимальная</td>
+</tr>
+<tr>
+<td>Когда использовать</td>
+<td>Тестирование и обновление ПО</td>
+<td>Внутри ВМ разворачивается сервер</td>
+<td>Анализ вредоносного ПО, тестирование сетевых атак или работы с конфиденциальными базами данных</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ssh">Доступ к ВМ по SSH</h2>
+<ul>
+<li>Генерация пары ключей на хосте</li>
+</ul>
+<pre><code class="language-bash">ssh-keygen
+</code></pre>
+<p>Ключевые файлы в директории <code>~/.ssh/</code>:</p>
+<ul>
+<li><code>id_ed25519</code> — Закрытый (приватный) ключ.</li>
+<li>
+<p><code>id_ed25519.pub</code> — Открытый (публичный) ключ.</p>
+</li>
+<li>
+<p>Копирование открытого ключа на ВМ (предварительно узнав адрес ВМ с помощью <code>ip a</code>)</p>
+</li>
+</ul>
+<pre><code class="language-bash">ssh-copy-id -i ~/.ssh/id_ed25519.pub user@192.168.122.222
+</code></pre>
+<ul>
+<li>Файл на виртуальной машине <code>~/.ssh/authorized_keys</code> содержит список всех публичных ключей, которым разрешен вход под данным пользователем.</li>
+<li>Отключение авторизации по паролю на ВМ. В главном конфигурационном файле SSH-сервера <code>/etc/ssh/sshd_config</code> изменить следующие строки:</li>
+</ul>
+<pre><code class="language-bash">   PubkeyAuthentication yes
+   PasswordAuthentication no
+   PermitEmptyPasswords no
+</code></pre>
+<ul>
+<li>Перезапустить службу SSH внутри виртуальной машины:</li>
+</ul>
+<pre><code class="language-bash">sudo systemctl restart sshd
+</code></pre>
+<ul>
+<li>Удобная настройка вызова через Алиас на хост-машине через конфиг <code>~/.ssh/config</code> (пример):</li>
+</ul>
+<pre><code class="language-bash">   Host myvm
+       HostName 192.168.122.222
+       User user
+       IdentityFile ~/.ssh/id_ed25519
+</code></pre>
+<ul>
+<li>Теперь для подключения достаточно ввести:</li>
+</ul>
+<pre><code class="language-bash">ssh myvm
+</code></pre>
+<hr />
+<h2 id="ufw">UFW</h2>
+<p>Межсетевой экран (файрвол) — это программно-аппаратный или программный элемент компьютерной сети, осуществляющий фильтрацию, контроль и сепарацию проходящего через него сетевого трафика на основе заданных критериев и правил безопасности. Файрвол всегда делит трафик по принципу «Кто был инициатором диалога?»:
+* Исходящий (Outgoing): Сервер сам проявляет инициативу. Например, при <code>apt update</code> сервер отправляет пакет-запрос в интернет.
+* Входящий (Incoming): Кто-то снаружи пытается заговорить с сервером первым. Например, легитимный пользователь подключается по SSH.</p>
+<p>Современный брандмауэр UFW в Linux — это <strong>Stateful Firewall</strong> (Файрвол с контролем состояний). Он не просто глухая стена, он обладает «памятью». Когда отправляется запрос наружу (например, DNS-запрос на порт 53, чтобы узнать IP-адрес сайта, или DHCP-запрос на порт 68, чтобы получить сетевой адрес от роутера), файрвол делает микро-запись в своей таблице состояний: «Мой сервер только что открыл диалог с сервером Х. Я жду ответа».Каждому пакету присваивается статус (State):
+   1. <code>NEW</code> — пакет пытается открыть новое, еще не существующее соединение (кто-то ломится к нам).
+   2. <code>ESTABLISHED</code> — пакет является частью уже установленного, двустороннего диалога (нам отвечают на наш же запрос).
+   3. <code>RELATED</code> — пакет технически связан с уже открытым соединением.</p>
+<p>Благодаря этому UFW автоматически пропускает любые входящие ответы (<code>ESTABLISHED</code>), если сервер был инициатором запроса. Политика запрета на вход (<code>deny incoming</code>) уничтожает только те пакеты, которые имеют статус <code>NEW</code> на незащищенных портах. Stateless Firewall (без сохранения состояния) не помнит историю пакетов. Для него каждый пакет — как первый раз. Если настроить его в режиме «запретить входящие, разрешить исходящие», интернет бы полностью сломался. В Stateless-режиме пришлось бы вручную писать небезопасные правила для обратного трафика (открывать порты 53 и 67 на вход для всех).</p>
+<h3 id="ssh_1">Настройка файрвола только на SSH</h3>
+<ul>
+<li>Проверить статус UFW:</li>
+</ul>
+<pre><code class="language-bash">sudo ufw status verbose
+</code></pre>
+<ul>
+<li>Если написано <code>Status: inactive</code>, значит файрвол выключен и пока пропускает абсолютно всё.</li>
+<li>Смотрим, какие порты и службы сейчас активны в системе:</li>
+</ul>
+<pre><code class="language-bash">sudo ss -tulpan
+</code></pre>
+<ul>
+<li>Могут присутствовать строки с процессами <code>systemd-resolve</code> (порт 53, локальный DNS) и <code>systemd-network</code> (порт 68, DHCP клиент).</li>
+<li>Сбрасываем файрвол к заводским настройкам:</li>
+</ul>
+<pre><code class="language-bash">   sudo ufw reset
+</code></pre>
+<ul>
+<li>Задаем политики по умолчанию (Выпускать всех, никого постороннего не впускать):</li>
+</ul>
+<pre><code class="language-bash">   sudo ufw default deny incoming
+   sudo ufw default allow outgoing
+</code></pre>
+<ul>
+<li>Вносим SSH в белый список (разрешаем вход на порт 22):</li>
+</ul>
+<pre><code class="language-bash">   sudo ufw allow 22/tcp
+</code></pre>
+<ul>
+<li>Активируем файрвол:</li>
+</ul>
+<pre><code class="language-bash">   sudo ufw enable
+</code></pre>
+<ul>
+<li>Проверить итоговый статус:</li>
+</ul>
+<pre><code class="language-bash">sudo ufw status verbose
+</code></pre>
+<ul>
+<li>Статус изменится на <code>Status: active</code> и таблицу, где на вход (To) разрешен только порт 22/tcp для IPv4 и IPv6.</li>
+</ul>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

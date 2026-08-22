@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Filesystem - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Назначение каталогов</a></li>
+        <li><a href="#c">Cсылки между файлами</a></li>
+        <li><a href="#_2">Путевые имена</a></li>
+        <li><a href="#_3">Права доступа</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p><strong>Файловая система Linux</strong></p>
+<h2 id="_1">Назначение каталогов</h2>
+<p>Структура основана на стандарте Unix Filesystem Hierarchy (иерархия файловой системы Unix). Все файлы организованы в каталоги, которые иерархически соединены друг с другом, образуя одну общую файловую структуру - древовидную или "родители-потомки". Над файлами и каталогами можно выполнять различные действия: копирования, перемещения, поиска или создания ссылок (ярлыков).</p>
+<p>Вверху файловой системы находится <strong>корневой каталог</strong> (обозначается символом "косая черта"), от которого ответвляются другие каталоги. Каждый каталог может содержать несколько других каталогов или файлов, но родительский каталог у него всегда бывает только один. В корневом каталоге имеется несколько <strong>системных каталогов</strong>, которые содержат файлы и программы, относящиеся к самой ОС Linux.</p>
+<p>В корневом каталоге содержится:</p>
+<ul>
+<li><code>/bin</code> (двоичные файлы) хранятся двоичные файлы Linux; большинство основных команд Unix находятся в этом каталоге.</li>
+<li><code>/sbin</code> (системные двоичные файлы) содержит системные двоичные файлы, которые являются утилитами для администрирования (например, <code>fdisk</code>).</li>
+<li><code>/boot</code> (или <code>efi</code>) содержит файлы загрузчика Linux.</li>
+<li><code>/dev</code> (устройства) содержит драйверы устройств, которые используются для доступа к устройствам и ресурсам системы, таким как диски, модемы, память и т.д. Например, вы можете читать входные сигналы от мыши, имея доступ к <code>/dev/mouse</code>. Устройства, чьи имена начинаются на <code>/dev/pty</code>, это "псевдотерминалы". Они используются для входа с удаленных "терминалов". Например, если ваша машина в сети, вход к вам по telnet будет использовать одно из устройств <code>/dev/pty</code>.</li>
+<li><code>/sys</code> похож на <code>/dev</code> и содержит конфигурации устройств и драйверов.</li>
+<li><code>/etc</code> (другое) содержит все файлы системы администрирования.</li>
+<li><code>/etc/passwd</code> информация обо всех пользователях в ОС.</li>
+<li><code>/etc/group</code> список всех групп, созданных в ОС.</li>
+<li><code>/etc/shadow</code> все учетные данные пользователей.</li>
+<li><code>/etc/hostname</code> название комьютера, использовать для редактирования.</li>
+<li><code>/etc/hosts</code> статические записи DNS внутри хоста.</li>
+<li><code>/etc/issue</code> информация об ОС.</li>
+<li><code>/etc/apt/sources.list</code> файл конфигурации.</li>
+<li><code>/etc/network/interfaces</code> информация о сетевых интерфейсах.</li>
+<li><code>/lib</code> (библиотеки) содержит общие библиотеки для двоичных файлов внутри <code>/bin</code> и <code>/sbin</code>. Эти файлы содержат код, который могут использовать многие программы. </li>
+<li><code>/proc</code> (процессы) хранятся файлы с информацией о процессах и ядре. файлы хранятся в памяти, а не на диске.</li>
+<li><code>/proc/cpuinfo</code> информация о процессоре.</li>
+<li><code>/proc/meminfo</code> информация об ОЗУ.</li>
+<li><code>/lost+found</code>, как следует из названия, содержит файлы, которые были восстановлены.</li>
+<li><code>/mnt</code> (монтировать) содержит примонтированные каталоги (например, удаленный файловый ресурс).</li>
+<li><code>/media</code> содержит каталоги, смонтированные для съемных носителей (например, DVD).</li>
+<li><code>/opt</code> (опции) служит для установки дополнительных программных пакетов.</li>
+<li><code>/tmp</code> (временная) используется временно; содержимое стирается после каждой перезагрузки.</li>
+<li><code>/usr</code> (пользователь) содержит множество подкаталогов, необходимые для нормального функционирования системы.</li>
+<li><code>/usr/share</code> хранит инструменты, файлы словарей.</li>
+<li><code>/home</code> является главным для пользователей.</li>
+<li><code>/root</code> является главным каталогом пользователя root.</li>
+<li><code>/srv</code> (обслуживание) содержит некоторые данные, относящиеся к функциям системного сервера (например, данные для FTP-серверов).</li>
+<li><code>/var</code> (переменная) хранятся переменные данные для баз данных, журналов и сайтов. Например, <code>/var/www/html/</code> содержит файлы для веб-сервера Apache.</li>
+<li><code>/run</code> (время выполнения) содержит данные системы выполнения (например, пользователей, вошедших в систему в данный момент).</li>
+</ul>
+<p>Корневой каталог, кроме того, содержит каталог <code>home</code>, который может содержать домашние каталоги всех пользователей системы. <strong>Домашний каталог</strong> каждого пользователя, в свою очередь, будет включать в себя каталоги, который пользователь создает для своих нужд. <strong>Рабочий каталог</strong> - тот, в котором вы в данный момент работаете в командной строке. При регистрации в системе в качестве рабочего принимается ваш домашний каталог, имя которого обычно совпадает с именем пользователя.</p>
+<h2 id="c">Cсылки между файлами</h2>
+<p>В Linux существует два вида ссылок на файлы - символические и жёсткие. <strong>Символические</strong> похожи на привычные ярлыки, при нажатии на которые открывают целевой файл или папку. Могут ссылаться на другие разделы диска, но содержат только имя файла, а не его содержимое. Если файл удалён, то ссылка будет существовать и указывать в никуда. <strong>Жёсткие</strong> ссылки тоже указывают на файлы, но работают только в пределах одной файловой системы, не могут ссылаться на каталоги, позволяют перемещать и переименовывать файл без вреда для ссылки. </p>
+<h2 id="_2">Путевые имена</h2>
+<p>Имя, которое дается каталогу или файлу при его создании, не является полным. <strong>Полным именем</strong> каталога является его путевое имя. Иерархические связи, существующие между каталогами, образуют пути, и эти пути можно использовать для однозначного указания каталога или файла и обращения к нему.</p>
+<p>Путевые имена могут быть абсолютными и относительными. <strong>Абсолютное путевое имя</strong> - это полное имя файла или каталога, начинающееся символом корневого каталога. <strong>Относительное путевое имя</strong> начинается символом рабочего каталога и представляет собой обозначение пути к файлу относительно вашего рабочего каталога. Как правило, относительные путевые имена нужно использовать при каждой возможности, а абсолютные - только в случае необходимости.</p>
+<p>При создании каталога в нем сразу же делаются две записи. Одна из них будет представлена точкой (.), а вторая - двумя точками (..). Точка обозначает путевое имя данного каталога, а две точки - путевое имя его родительского каталога.
+Например, если letters - рабочий каталог и нужно скопировать в него файл weather, то каталог chris (родительский) можно обозначить двумя точками, а каталог letters - одной: <code>ср ../weather .</code></p>
+<h2 id="_3">Права доступа</h2>
+<p>У каждого файла есть уникальное имя, по которому к нему можно обращаться, и конечный набор операций, которые процессы могут выполнять в отношении этого объекта - read (чтение), write (запись) и execute (выполнение). <strong>Права доступа</strong> означают разрешение на выполнение операции. </p>
+<p>Когда пользователь входит в систему, его оболочка получает UID и GID (UID – идентификатор пользователя, GID - идентификатор группы), которые содержатся в его записи в файле паролей, и они наследуются всеми его дочерними процессами. 
+- <strong>SUID (Set User ID)</strong> - атрибут исполняемого файла, позволяющий запустить его с правами владельца, не зависимо от того - кто запускает эту программу.
+- <strong>SGID (Set Group ID)</strong> аналогичен SUID, но относиться к группе. При этом, если для каталога установлен бит SGID, то создаваемые в нем объекты будут получать группу владельца каталога, а не пользователя.</p>
+<p>Права доступа состоят из трех троек символов. Первая тройка представляет права владельца файла, вторая представляет права группы файла и третья права всех остальных пользователей.</p>
+<p><img alt="" src="../../pic/ls-l.jpg" /></p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

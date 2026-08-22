@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>CLI Command-Line Interface - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#cli-command-line-interface">CLI Command-Line Interface</a></li>
+        <li><a href="#tmux">Назначение Tmux</a></li>
+        <li><a href="#linux">Команды Linux</a></li>
+        <li><a href="#_1">Общие сведения</a></li><li><a href="#_2">Системные</a></li><li><a href="#_3">Сетевые</a></li><li><a href="#_4">Управление пакетами</a></li><li><a href="#_5">Управление сервисами и процессами</a></li><li><a href="#_6">Пользователи и группы</a></li><li><a href="#_7">Права доступа файлов и каталогов</a></li><li><a href="#_8">Файлы и каталоги</a></li><li><a href="#_9">Текстовые файлы</a></li><li><a href="#_10">Поиск файлов и внутри них</a></li><li><a href="#_11">Сжатие файлов</a></li><li><a href="#_12">Управление вводом/выводом</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="cli-command-line-interface">CLI Command-Line Interface</h1>
+<p>При загрузке системы сначала запускается ядро (процесс 0), которое в свою очередь запускает командный интерпретатор <strong>shell</strong> (процесс 1). Взаимодействие пользователя с системой происходит в интерактивном режиме посредством командного языка. Оболочка операционной системы – shell – интерпретирует вводимые команды, запускает соответствующие программы (процессы), формирует и выводит ответные сообщения. Shell не только интерпретирует команды, но и создает среду, которую можно конфигурировать и программировать. У shell есть свой язык программирования, который позволяет писать программы, содержащие достаточно сложные последовательности команд.</p>
+<p>Каждому пользователю предоставляется свой собственный пользовательский интерфейс, или shell. Строка, в которой набирается команда, называется командной строкой.</p>
+<p>Существует множество различных оболочек Unix, но все они — производные от оболочки Bourne shell (<code>/bin/sh</code>), стандартной оболочки, разработанной в компании Bell Labs для ранних версий Unix. Система Linux использует расширенную версию оболочки Bourne под названием <code>bash</code>, или Bourne-again. Оболочка <code>bash</code> — это оболочка по умолчанию в большинстве дистрибутивов Linux, и каталог <code>/bin/sh</code> обычно указывает на <code>bash</code>.</p>
+<h1 id="tmux">Назначение Tmux</h1>
+<p><code>tmux</code> откроет новый сеанс, что:</p>
+<ul>
+<li>позволяет запускать несколько терминальных сеансов в одном окне;</li>
+<li>помогает сохранить сессии, если соединение разорвалось;</li>
+<li>позволяет совместно с другими работать в терминале и отображает, что делает каждый пользователь.</li>
+</ul>
+<h1 id="linux">Команды Linux</h1>
+<h2 id="_1">Общие сведения</h2>
+<ul>
+<li>ключ <code>-h</code> или <code>--help</code> : справка по любой команде</li>
+<li><code>man</code>: справка по командам</li>
+<li><code>whatis &lt;название_команды&gt;</code> : ищет заголовки man-страниц по целым словам (Пример: <code>whatis pwd</code>)</li>
+<li><code>apropos &lt;название_команды&gt;</code> : ищет заголовки man-страниц по образцу, ищет все упоминаемые символы (Пример: <code>apropos ls</code>)</li>
+<li><code>sudo</code> : для выполнения системных команд пользователями с низким уровнем привилегий (входящих в группу sudo)</li>
+<li><code>history</code> список недавно выполненных команд</li>
+<li>символ <code>|</code> : канал команд (пайп), объединить вывод одной команды и отправить его следующей</li>
+</ul>
+<h2 id="_2">Системные</h2>
+<ul>
+<li><code>reboot</code> перезапустить ОС</li>
+<li><code>poweroff</code> выключить ОС</li>
+<li><code>fdisk</code> показать устройства, подключенные к ОС</li>
+<li><code>lsblk</code> отобразить список дисков</li>
+<li><code>lsusb</code> отобразить список USB-устройств</li>
+<li><code>mount /dev/sdb1 /mnt/usb</code> примонтировать USB-накопитель</li>
+<li><code>umount /mnt/usb</code>  извлечь USB-накопитель</li>
+<li><code>uname</code> отобразить информацию об ОС</li>
+</ul>
+<h2 id="_3">Сетевые</h2>
+<ul>
+<li><code>hostname</code> отобразить имя хоста</li>
+<li><code>ifconfig</code>, <code>ip addr</code> информация о сетевом интерфейсе</li>
+<li><code>netstat -antu</code> информация о портах (ключи означают: показать все сокеты, не разрешать имена, показать TCP и UDP-соединения)</li>
+</ul>
+<h2 id="_4">Управление пакетами</h2>
+<ul>
+<li><code>apt update &amp;&amp; apt upgrade -y</code> : <code>update</code> обновляет список пакетов последними версиями, <code>upgrade</code> обновит и установит последнюю версию пакетов, которые уже были получены (с помощью команды <code>update</code>)</li>
+<li><code>full-upgrade -y</code> полностью обновить одну версию до другой</li>
+<li><code>dpkg -l</code> вывести список всех установленных пакетов ПО</li>
+<li><code>apt install [имя пакета] -y</code> установка нового ПО</li>
+<li><code>dpkg -i [filename.deb]</code> установка ПО с расширением .deb</li>
+<li><code>apt remove [имя пакета]</code> удалить существующее приложение</li>
+<li><code>apt-cache search keyword [ключевое слово для поиска]</code> поиск пакетов репозитория</li>
+<li><code>apt-cache show [имя программы]</code> просмотр информации</li>
+</ul>
+<h2 id="_5">Управление сервисами и процессами</h2>
+<p>Сервисы — это серверы, которые могут работать в ОС, например, SSH, Web, FTP.</p>
+<ul>
+<li><code>service [имя сервиса]</code> status получить статус сервиса</li>
+<li><code>systemctl status [имя сервиса]</code></li>
+<li><code>service [имя сервиса] start</code> запустить сервис</li>
+<li><code>systemctl start [имя сервиса]</code></li>
+<li><code>service [имя сервиса] stop</code> остановить сервис</li>
+<li><code>systemctl stop [имя сервиса]</code></li>
+<li><code>service [имя сервиса] restart</code> перезапустить сервис</li>
+<li><code>systemctl restart [имя сервиса]</code></li>
+<li><code>systemctl enable [имя сервиса]</code>включить автоматический запуск сервиса при старте системы</li>
+<li><code>systemctl disable [имя сервиса]</code> отключить автоматический запуск</li>
+<li><code>htop</code> отображение всех запущенных процессов</li>
+<li><code>ps -au</code> отображение всех запущенных процессов</li>
+<li><code>pgrep &lt;опции&gt; &lt;процесс&gt;</code> : показывает все PID определенного процесса (Пример: <code>pgrep -l sshd</code>)</li>
+<li><code>fuser</code> : идентификация процессов, используя файлы или сокеты. Примеры:</li>
+<li><code>fuser -va 22/tcp</code> покажет PID процесса, использующий 22 порт; </li>
+<li><code>fuser -va /home</code> покажет PID процесса, использующий домашний каталог; </li>
+<li><code>fuser -k -TERM -m /home</code> завершит все процессы, имеющие доступ к домашнему каталогу.</li>
+<li><code>lsof &lt;название_файла&gt;</code> : покажет список процессов, использующих указанный файл или каталог (Пример: <code>lsof /home</code>)</li>
+<li><code>kill [PID]</code> завершить процесс</li>
+<li><code>kill -9 [PID]</code> завершить процесс принудительно</li>
+<li><code>killall</code> : убивает (завершает) процессы по имени. (Пример: <code>killall 0 httpd</code>)</li>
+</ul>
+<h2 id="_6">Пользователи и группы</h2>
+<ul>
+<li><code>useradd -m [имя пользователя] -G [имя группы] -s [тип командной оболочки]</code> добавить нового пользователя (эту же информацию можно просмотреть в системном файле <code>/etc/passwd</code>)</li>
+<li><code>passwd  [имя пользователя]</code> задать пароль </li>
+<li><code>su [имя пользователя]</code> переключиться на другого пользователя</li>
+<li><code>userdel [имя пользователя]</code> удалить пользователя </li>
+<li><code>sudo -l</code>  узнать права текущего пользователя</li>
+<li><code>id</code> информация о текущем пользователе</li>
+<li><code>w</code> или <code>who</code> (с меньшими подробностями) вывести список пользователей, которые в настоящее время вошли в систему</li>
+<li><code>whoami</code> : выводит имя пользователя, который задействован в данный момент</li>
+<li><code>last</code> вывести список последних авторизованных пользователей</li>
+<li><code>groupadd [имя новой группы]</code> создать новую группу</li>
+<li><code>usermod -aG [имя группы] [имя пользователя]</code> добавить пользователя в группу</li>
+<li><code>groups &lt;имя_пользователя&gt;</code> выводит список групп, в которых состоит пользователь</li>
+</ul>
+<h2 id="_7">Права доступа файлов и каталогов</h2>
+<ul>
+<li><code>chmod [число, обозначающее права доступа] [имя файла]</code> выдать права доступа</li>
+</ul>
+<p>Права доступа разделены на три категории:</p>
+<ul>
+<li>чтение (r): 4;</li>
+<li>запись (w): 2;</li>
+<li>исполнение (x): 1.</li>
+</ul>
+<p>Для установки прав доступа применяется следующий шаблон: <code>[Пользователь:r/w/x] [Группа:r/w/x] [Все:r/w/x]</code></p>
+<p>Субъекты: </p>
+<ul>
+<li>«u» - владелец,</li>
+<li>«g» - группа файла,</li>
+<li>«o» - все остальные пользователи.</li>
+</ul>
+<p>Знак: «+» - добавить права, «-» - убрать права.</p>
+<p>Пример: <code>chmod o+x /home/file</code> (всем остальным пользователям разрешить открывать файл).</p>
+<p>Предусмотрены числовые режимы:</p>
+<ul>
+<li>7: rwx,</li>
+<li>6: rw-,</li>
+<li>5: r-x, </li>
+<li>4: r--, </li>
+<li>3: -wx, </li>
+<li>2: -w-, </li>
+<li>1: --x, </li>
+<li>0: ---</li>
+</ul>
+<p>Пример: <code>chmod 710 /home/file</code>, т.е. -rwx--x--- все права у владельца и исполнение у группы.</p>
+<p>Для того, чтобы задать бит suid введите <code>chmod u+s &lt;название/путь_файла&gt;</code>, для бит sgid введите <code>chmod g+s &lt;название/путь_файла&gt;</code>. Для установки suid, sgid и sticky используется четырехзначный режим прав доступа.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">suid</th>
+<th style="text-align: left;">sgid</th>
+<th style="text-align: left;">sticky</th>
+<th style="text-align: left;">режим</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">on</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Пример: <code>chmod 4775 /home/file</code>. Вывод команды <code>ls -l</code>: <code>-rwsrwxr-x 1 user user 0 Sep  9 12:42 /home/file</code>.</p>
+<ul>
+<li><code>chown</code> : изменяет владельца или группу файла. Синтаксис: <code>chown &lt;имя_пользователя/группы&gt; &lt;название_файла&gt;</code></li>
+<li><code>chgrp &lt;имя_пользователя/группы&gt; &lt;название_файла&gt;</code> : изменяет группу файла</li>
+<li><code>umask &lt;значение&gt;</code> : когда процесс создает новый файл, он указывает права доступа (зачастую 0666 — чтение и запись всеми). При этом система обращается к параметру <strong>umask</strong>, который задает, какие права доступа <strong>должны быть отключены</strong>. Синтаксис: <code>umask</code> (Пример вывода: <code>0002</code>). Изменение значения: <code>umask 0077</code>.</li>
+</ul>
+<h2 id="_8">Файлы и каталоги</h2>
+<ul>
+<li><code>ls -la [путь к целевой папке]</code> вывести список файлов и подкаталогов внутри любого каталога (<code>-a</code> : все содержимое, включая скрытые файлы; <code>-l</code> : форматированный список; <code>-X</code> сортирует содержимое по алфавиту)</li>
+<li><code>touch</code> создать пустой файл</li>
+<li><code>file [имя файла]</code> узнать тип файла в системе Linux</li>
+<li><code>cp [путь к исходному файлу] [путь файла назначения]</code> скопировать файл</li>
+<li><code>mv [путь к исходному файлу] [путь файла назначения]</code> переместить (вырезать) файл или переименовать</li>
+<li><code>rm [путь к файлу]</code> удалить файл</li>
+<li><code>rm -r</code> для рекурсивного удаления целого каталога с его внутренними файлами</li>
+<li><code>pwd</code> вывести текущий рабочий каталог</li>
+<li><code>cd [путь до нового каталога]</code> изменить текущий рабочий каталог. Если ввести <code>cd</code> без указания пути, пользователь попадёт в домашний каталог; если <code>cd ..</code> — перейдёт в предыдущий каталог.</li>
+<li><code>mkdir [имя нового каталога]</code> создать каталог</li>
+<li><code>rmdir &lt;опции&gt; &lt;название&gt;</code> : удаляет указанный пустой каталог</li>
+<li><code>cp -r</code>, <code>mv -r</code>, <code>rm -r</code> для работы с каталогом и его внутренними файлами</li>
+<li><code>wget [url]</code>  скачивание файлов из интернета/локальной сети</li>
+<li><code>curl -O [url]</code> скачивание файлов</li>
+<li><code>du &lt;опции&gt; &lt;название_файла&gt;</code> : отображает размер указанного файла или каталога</li>
+<li><code>ln</code> : создаёт ссылки между файлами. </li>
+<li>Синтаксис жёсткой ссылки: <code>ln -P &lt;название_файла&gt; &lt;название_ссылки&gt;</code></li>
+<li>Синтаксис символической ссылки: <code>ln -s &lt;название_файла&gt; &lt;название_ссылки&gt;</code> (Пример: <code>ln -s file.txt soft_link</code>)</li>
+<li><code>lpr &lt;название_файла&gt;</code> отправить файл на печать</li>
+<li><code>lpq</code> проверить ход выполнения печати</li>
+<li></li>
+</ul>
+<h2 id="_9">Текстовые файлы</h2>
+<ul>
+<li><code>echo</code> печать текста в терминал</li>
+<li><code>cat</code> отображение содержимого текстового файла</li>
+<li><code>-b</code> — пронумеровать все непустые строки;</li>
+<li><code>-n</code> — пронумеровать все строки; </li>
+<li><code>-s</code> — отобразить несколько подряд идущих пустых строк в виде одной; </li>
+<li><code>-T</code> — показать символы табуляции как “^|”; </li>
+<li><code>-E</code> — показать символы конца строки как “$”.</li>
+<li><code>head -n [i] [имя файла]</code> отобразить десять первых строк</li>
+<li><code>tail -n [i] [имя файла]</code> отобразить десять последних строк</li>
+<li><code>more [имя файла]</code> просмотреть большой файл (Enter или пробел, чтобы перейти вперед; для поиска текста / (косая черта); клавиша Q, чтобы выйти)</li>
+<li><code>less [имя файла]</code> работает быстрее, не загружает сразу весь файл (перемещение с помощью Page Up и Page Down)</li>
+<li><code>sort [имя файла] &gt; [отсортированный файл]</code> отсортировать текстовый файл</li>
+<li><code>od &lt;опции&gt; &lt;название_файла&gt;</code> : просматривает бинарные файлы в виде дампа байтов</li>
+<li><code>tee</code> : берёт вывод и записывает в файл. Пример: <code>echo "last string" | sudo tee -a file</code> — добавит последнюю строку в файл.</li>
+<li><code>sort [имя файла] &gt; [отсортированный файл]</code> отсортировать текстовый файл</li>
+<li><code>uniq [имя файла] &gt; [имя файла без дублей]</code> удалить дубликаты в текстовом файле</li>
+<li><code>nano</code> текстовый редактор. Синтаксис: <code>nano &lt;название_файла&gt;</code></li>
+</ul>
+<h2 id="_10">Поиск файлов и внутри них</h2>
+<ul>
+<li><code>locate [имя файла]</code> быстро найти файл (перед вводом обновить <code>updatedb</code>)</li>
+<li><code>which [имя приложения]</code> найти путь к файлу </li>
+<li><code>find [параметры]</code> команда для поиска файлов с более гибкими параметрами </li>
+<li><code>grep [опции] [паттерн] [имя файла]</code> команда фильтрации</li>
+<li><code>-i</code> — игнорировать регистр и включать все прописные/строчные буквы;</li>
+<li><code>-r</code> — выполнить рекурсивный поиск во вложенных каталогах;</li>
+<li><code>-l</code> — распечатать имена файлов, в которых найден текст, соответствующий фильтру</li>
+<li><code>awk /[критерий поиска]/ [опции] [имя файла]</code> расширенный инструмент для фильтрации </li>
+<li><code>cut</code> извлечение подстрок (например, cut -d ":" -f 2 извлечение пароля)</li>
+</ul>
+<h2 id="_11">Сжатие файлов</h2>
+<p>Есть несколько способов (алгоритмов) для сжатия файлов:</p>
+<ul>
+<li><strong>Архив Tar</strong></li>
+<li><code>tar cf compressed.tar files</code> Сжать с использованием расширения tar</li>
+<li><code>tar xf compressed.tar</code> Извлечь файл, сжатый tar</li>
+<li><code>-c</code> — создать архив; </li>
+<li><code>-r</code> — добавить файлы в архив; </li>
+<li><code>-A</code> — добавить содержимое tar-файлов в архив; </li>
+<li><code>--delete</code> — удалить файлы из архива (невозможно на архивных лентах); </li>
+<li><code>-t</code> — вывести список файлов в архиве; </li>
+<li><code>-x</code> — извлечь файлы из архива; </li>
+<li><code>-f</code> — информация будет извлекаться из файла; </li>
+<li><code>-v</code> — расширенный вывод информации о выполняемых действиях.</li>
+<li><strong>Архив Gz</strong></li>
+<li><code>tar cfz compressed.tar.gz files</code> Создать compressed.tar.gz из файлов</li>
+<li><code>tar xfz compressed.tar.gz</code> Извлечь compressed.tar.gz</li>
+<li><code>gzip file.txt &gt; compressed.txt.gz</code> Создать файл compressed.txt.gz</li>
+<li><code>gzip -d compressed.txt.gz</code> Извлечь compressed.txt.gz</li>
+<li><code>-d</code> — декомпрессия файла; </li>
+<li><code>-t</code> — проверяет целостность архива; </li>
+<li><code>-v</code> — расширенный вывод информации.</li>
+<li><strong>Архив Bz2</strong></li>
+<li><code>tar cfj compressed.tar.bz2 files</code> Создать compressed.tar.bz2 из файлов</li>
+<li><code>tar xfj compressed.tar.bz2</code>Распаковать compressed.tar.bz2</li>
+<li><strong>ZIP-архив</strong></li>
+<li><code>zip compressed.zip files</code> Создать compressed.zip из файлов </li>
+<li><code>unzip compressed.zip</code> Распаковать сжатые файлы .zip</li>
+</ul>
+<h2 id="_12">Управление вводом/выводом</h2>
+<p>В работе с командной строкой Linux есть понятия стандартных устройств ввода, вывода и вывода ошибок.</p>
+<ul>
+<li><strong>stdin</strong> - стандартное устройство ввода. Имеет файловый указатель 0. Автоматически открывается всеми процессами.</li>
+<li><strong>stdout</strong> - стандартное устройство вывода. Имеет файловый указатель 1. Автоматически открывается всеми процессами.</li>
+<li><strong>stderr</strong> - стандартный поток ошибок (специальное устройство вывода для сообщений об ошибках. Имеет файловый указатель 2. Автоматически открывается всеми процессами).</li>
+</ul>
+<p>Операторы перенаправления способны изменять направление вывода и ввода информации. Так оператор:</p>
+<ul>
+<li><code>&gt;</code> - перенаправляет стандартный поток в файл (другой поток). При этом если файл существует, то он перезаписывается, если не существует - создается.</li>
+<li><code>&gt;&gt;</code> - перенаправляет стандартный поток в файл. При этом если файл существует, то информация добавляется в конец, если не существует - файл создается </li>
+<li><code>&lt;</code> - перенаправляет содержимое указанного файла на стандартный ввод программе.</li>
+<li><code>&gt;&amp;</code> - перенаправляет стандартные потоки вывода и ошибок друг в друга.</li>
+</ul>
+<p>Существуют средства группирования команд:</p>
+<ul>
+<li><code>cmd1 arg ...; cmd2 arg ...; ... cmdN arg ...</code> - последовательное выполнение команд;</li>
+<li><code>cmd1 arg ...&amp; cmd2 arg ...&amp; ... cmdN arg ...</code> - асинхронное выполнение команд;</li>
+<li><code>cmd1 arg ... &amp;&amp; cmd2 arg ...</code> - зависимость последующей команды от предыдущей таким образом, что последующая команда выполняется, если предыдущая выдала нулевое значение;</li>
+<li><code>cmd1 arg ... || cmd2 arg ...</code> - зависимость последующей команды от предыдущей таким образом, что последующая команда выполняется, если предыдущая выдала ненулевое значение.</li>
+</ul>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

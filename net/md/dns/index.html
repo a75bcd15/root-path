@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>DNS - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../uwu/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../uwu/">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#dns">DNS</a></li>
+        <li><a href="#_1">Структура заголовка</a></li><li><a href="#_2">Наиболее употребительные типы записей ресурсов</a></li><li><a href="#_3">Рекурсия</a></li><li><a href="#dns_1">Передача зоны DNS</a></li>
+        <li><a href="#dns-brute-force">DNS Brute-Force</a></li>
+        <li><a href="#nslookup-dig">Утилиты nslookup и dig</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="dns">DNS</h1>
+<p>Domain Name System или <strong>Система доменных имен</strong> переводит доменные имена в IP-адреса. Доменные имена делятся на <strong>общедоступные</strong> и <strong>частные</strong>. Любой, кто подключен к интернету, может получить доступ к сайту по общедоступному домену. Частные имена используются в локальный сетях, например, внутри Windows Active Directory.</p>
+<p>Протокол DNS функционирует в режиме <strong>"запрос-ответ"</strong>. В частности, клиент, желающий преобразовать DNS-имя в IР-адрес, посылает запрос DNS-cepвepy, а тот - ответ с запрашиваемой информацией. DNS в качестве транспортного использует протокол <a href="../udp/"><strong>UDP</strong></a>.</p>
+<p>На <strong>DNS-cepвepax</strong> хранится база данных с записями ресурсов, содержащих сопоставления IР-адресов и доменных имен, которыми эти серверы делятся с клиентами и другими DNS-серверами. <strong>В Linux</strong> команда <code>host [доменное имя]</code> выдаёт IP-адрес. Добавить статическую запись DNS внутри хоста  можно в файле <code>/../etc/hosts</code>.</p>
+<h2 id="_1">Структура заголовка</h2>
+<p><img alt="" src="../../pic/dns-header.png" /></p>
+<ul>
+<li><strong>Запрос/Ответ, ЗО (Query/Response, QR).</strong> Обозначает, содержит ли пакет DNS-зaпpoc или DNS-ответ.</li>
+<li><strong>Авторитетный ответ, АО (Authoritative Answers, АА).</strong> Если значение этого поля установлено в ответном пакете, это означает, что ответ поступил от авторитетного сервера доменных имен, обслуживающего данный домен.</li>
+<li><strong>Усечение, УС (Truncation, ТС).</strong> Обозначает, что ответ был усечен, поскольку он оказался слишком большим и не поместился в пакет.</li>
+<li><strong>Рекурсия доступна, РД (Recursion AvailaЫe, RA).</strong> Если значение этого поля установлено в ответе, это означает, что рекурсивные запросы поддерживаются на сервере доменных имен.</li>
+<li><strong>Зарезервировано, З (Reserved, Z).</strong> По стандарту RFC 1035 в этом поле должны быть установлены все нули. Но оно иногда используется в качестве расширения поля RCode.</li>
+<li><strong>Код ответа (Response Code, RCode).</strong> Служит в DNS-ответах для указания на наличие любых ошибок.</li>
+</ul>
+<h2 id="_2">Наиболее употребительные типы записей ресурсов</h2>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>IPv4-адрес хоста</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NS</td>
+<td>Авторитетный сервер доменных имён</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CNAME</td>
+<td>Каноническое имя псевдонима</td>
+</tr>
+<tr>
+<td>15</td>
+<td>MX</td>
+<td>Обмен почтой</td>
+</tr>
+<tr>
+<td>16</td>
+<td>TXT</td>
+<td>Текстовая строка</td>
+</tr>
+<tr>
+<td>28</td>
+<td>AAAA</td>
+<td>IPv6-адрес хоста</td>
+</tr>
+<tr>
+<td>251</td>
+<td>IXFR</td>
+<td>Инкрементный перенос зоны</td>
+</tr>
+<tr>
+<td>252</td>
+<td>AXFR</td>
+<td>Полный перенос зоны</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">Рекурсия</h2>
+<p>В силу иерархического характера межсетевой структуры DNS все DNS-cepвepы должны быть в состоянии связываться друг с другом, чтобы получать ответы на запросы клиентов. Когда одному DNS-cepвepy требуется найти IР-адрес, он запрашивает другой DNS-cepвep от имени клиента, делающего первоначальный запрос. Этот процесс называется <strong>рекурсией</strong>. </p>
+<p>Подобные серверы установлены в локальных сетях и у некоторых провайдерах. Все остальные серверы <strong>нерекурсивные</strong>. Если компьютер отправит запрос на сервер и сервер не имеет информацию по данному запросу, то сервер в качестве ответа вернет компьютеру IP адрес другого сервера, который возможно имеет некую информацию. Компьютеру придется делать запрос на другой сервер и так до тех пор, пока не получит требуемую информацию.</p>
+<h1 id="dns_1">Передача зоны DNS</h1>
+<p><strong>DNS-зoнa</strong> - это пространство имен (или группа), вести которое поручено DNS-серверу. Как правило, дополнительные DNS-серверы вводятся для разделением ответственности между субдоменами (почты, веба, БД). </p>
+<p>Копирование записей главного сервера на другой подчиненный сервер DNS называется <strong>передачей зоны DNS</strong>. Для передачи (переноса) зоны используется протокол <a href="../tcp/"><strong>TCP</strong></a>. Например, системные администраторы таким образом могут настроить вспомогательный DNS-cepвep на случай отказа работы основного сервера. В свою очередь злоумышленники могут воспользоваться этим, найдя домен главного сервера DNS (NS-сервер). Запрос ниже срабатывает редко:</p>
+<ul>
+<li>Сначала получим список серверов ns для случайного доменного имени:</li>
+</ul>
+<p><code>host -t ns google.com | cut -d " " -f 4</code></p>
+<ul>
+<li>Пробуем запросить сервер ns1 с помощью команды <code>host -l</code>:</li>
+</ul>
+<p><code>host -l google.com ns1.google.com</code></p>
+<p>Имеются следующие виды переноса зон:
+- <strong>Полный перенос зоны (AXFR)</strong>, при которых вся зона пересылается между устройствами.
+- <strong>Инкрементный перенос зоны (IXFR)</strong>, при которых пересылается лишь часть данных зоны.</p>
+<h1 id="dns-brute-force">DNS Brute-Force</h1>
+<p>Поиск доменных имен <strong>методом грубой силы</strong> позволяет находить скрытые поддомены. С помощью <a href="../../etc/dns-brute-force.sh"><strong>простенького bash-скрипта</strong></a> и команды <code>host</code> можно перебрать домены из заготовленного файла (словаря).</p>
+<p>Помимо этого существуют готовые решения:</p>
+<ul>
+<li><code>fierce -dns [доменное имя]</code></li>
+<li><code>python sublist3r.py [доменное имя]</code></li>
+<li><code>python subbrute.py [доменное имя]</code></li>
+</ul>
+<p>Главное, чтобы инструменты:</p>
+<ol>
+<li>Осуществляли быстрый перебор на основе файла словаря;</li>
+<li>Проверяли возможность передачи зоны DNS;</li>
+<li>Автоматизировали поиск в поисковых системах.</li>
+</ol>
+<h2 id="nslookup-dig">Утилиты nslookup и dig</h2>
+<p><code>nslookup</code> - инструмент командной строки сетевого администрирования, предназначенный для получения информации о записях системы доменных имен.</p>
+<p><code>dig</code> (Domain Information Groper) представляет собой инструмент командной строки, используемый для выполнения DNS-запросов и получения ценной информации о доменах, IP-адресах и записях DNS.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

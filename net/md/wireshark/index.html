@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Файлы перехвата - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../uwu/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Linux</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Безопасность</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../uwu/">Linux</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Файлы перехвата</a></li>
+        <li><a href="#_2">Профили конфигурации</a></li>
+        <li><a href="#_3">Фильтры</a></li>
+        <li><a href="#_4">Фильтры перехвата</a></li><li><a href="#_5">Фильтры отображения</a></li><li><a href="#_6">Статистика и преобразование</a></li>
+        <li><a href="#_7">Узлы и диалоги между ними</a></li><li><a href="#_8">Иерархия сетевых протоколов</a></li><li><a href="#_9">Преобразование имен</a></li><li><a href="#_10">Дешифрование сетевых протоколов</a></li><li><a href="#_11">Отслеживание потоков</a></li><li><a href="#_12">Длина пакетов</a></li><li><a href="#_13">Составление графиков</a></li><li><a href="#_14">Экспертная информация</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="_1">Файлы перехвата</h1>
+<p>Данные файлы можно использовать для изучения работы сетевых протоколов:</p>
+<ul>
+<li><a href="../../etc/http_ip4and6.pcapng"><strong>Разница между IPv4 и IPv6</strong></a>;</li>
+<li><a href="../../etc/tcp_handshake.pcapng"><strong>Трёхстороннее рукопожатие TCP</strong></a>;</li>
+<li><a href="../../etc/tcp_teardown.pcapng"><strong>Завершение соединения TCP</strong></a>;</li>
+<li><a href="../../etc/dhcp_nolease_initialization.pcapng"><strong>Процесс DORA в DHCP</strong></a>;</li>
+<li>Этапы пересылки пакетов по SMTP:</li>
+<li><a href="../../etc/mail_sender_client_1.pcapng"><strong>От клиента к локальному серверу</strong></a>;</li>
+<li><a href="../../etc/mail_sender_server_2.pcapng"><strong>От локального к удалённому серверу</strong></a>;</li>
+<li><a href="../../etc/mail_receiver_server_3.pcapng"><strong>От к удалённого сервера к удалённому клиенту</strong></a>.</li>
+</ul>
+<h1 id="_2">Профили конфигурации</h1>
+<p>В профиле конфигурации хранится следующее:</p>
+<ul>
+<li>Глобальные параметры настройки;</li>
+<li>Фильтры перехвата;</li>
+<li>Фильтры отображения;</li>
+<li>Правила выделения цветом;</li>
+<li>Запрещенные сетевые протоколы;</li>
+<li>Принудительные расшифровки;</li>
+<li>Недавние установки, в том числе размеры панелей, настройки представления меню и ширина столбцов;</li>
+<li>Характерные для протоколов таблицы, содержащие, например, перечень пользователей сетевого протокола SNMP и специальные НТТР-заголовки.</li>
+</ul>
+<p>Чтобы просмотреть список профилей конфигурации, выберите команду <strong>Edit &gt; Configuration &gt; Profiles</strong> из главного меню. Можно также щелкнуть правой кнопкой мыши на разделе профилей в правом нижнем углу окна и выбрать команду Manage Profiles из контекстного меню.</p>
+<h1 id="_3">Фильтры</h1>
+<h2 id="_4">Фильтры перехвата</h2>
+<p><strong>Синтаксис BPF</strong> (Berkeley Packet Filter - фильтр пакетов Беркли) характерен для целого ряда приложений анализа пакетов. Фильтр, созданный с помощью синтаксиса BPF, называется <strong>выражением</strong>, при чем каждое выражение состоит из одного или нескольких <strong>примитивов</strong>. В свою очередь, примитивы состоят из одного или нескольких <strong>квалификаторов</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Квалификатор</th>
+<th style="text-align: left;">Описание</th>
+<th style="text-align: left;">Примеры</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">Обозначает имя или номер идентификатора, на который делается ссылка</td>
+<td style="text-align: left;">host, net, port</td>
+</tr>
+<tr>
+<td style="text-align: left;">dir</td>
+<td style="text-align: left;">Обозначает направление передачи при обмене данными с сетевым узлом</td>
+<td style="text-align: left;">src, dst</td>
+</tr>
+<tr>
+<td style="text-align: left;">proto</td>
+<td style="text-align: left;">Ограничивает соответствие конкретному протоколу</td>
+<td style="text-align: left;">ether, ip, tcp, udp, http, ftp</td>
+</tr>
+</tbody>
+</table>
+<p>Операции: </p>
+<ul>
+<li>И (&amp;&amp;);</li>
+<li>ИЛИ ( || );</li>
+<li>НЕ (!).</li>
+</ul>
+<p><strong>Примеры:</strong> </p>
+<ul>
+<li><code>tcp [13] 18</code> Пакеты ТСР с установленными флагами SYN и АСК</li>
+<li><code>tcp [13] &amp; 16 == 16</code> Пакеты ТСР с установленным флагом АCK</li>
+<li><code>ether host 00:00:00:00:00:00</code> Входящий и исходящий сетевой трафик по указанному МА С-адресу</li>
+<li><code>broadcast</code> Только широковещательный трафик</li>
+<li><code>ip</code> Трафик только по сетевому протоколу 1Pv4</li>
+</ul>
+<h2 id="_5">Фильтры отображения</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Операция</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">==</td>
+<td style="text-align: left;">Равно</td>
+</tr>
+<tr>
+<td style="text-align: left;">!=</td>
+<td style="text-align: left;">Не равно</td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;</td>
+<td style="text-align: left;">Больше</td>
+</tr>
+<tr>
+<td style="text-align: left;">&lt;</td>
+<td style="text-align: left;">Меньше</td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;=</td>
+<td style="text-align: left;">Больше или равно</td>
+</tr>
+<tr>
+<td style="text-align: left;">&lt;=</td>
+<td style="text-align: left;">Меньше или равно</td>
+</tr>
+<tr>
+<td style="text-align: left;">and</td>
+<td style="text-align: left;">Оба задаваемых условия должны быть истинны</td>
+</tr>
+<tr>
+<td style="text-align: left;">or</td>
+<td style="text-align: left;">Истинным должно быть хотя бы одно задаваемое условие</td>
+</tr>
+<tr>
+<td style="text-align: left;">xor</td>
+<td style="text-align: left;">Истинным должно быть одно и только одно условие</td>
+</tr>
+<tr>
+<td style="text-align: left;">not</td>
+<td style="text-align: left;">Ни одно из задаваемых условий не истинно</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Примеры:</strong> </p>
+<ul>
+<li><code>!tcp.port 3389</code> Отсеять сетевой трафик по протоколу RDP</li>
+<li><code>tcp.flags.syn=1</code> Отобразить пакеты ТСР с установленным флагом SYN</li>
+<li><code>!arp</code> Удалить сетевой трафик по протоколу ARP</li>
+<li><code>http</code> Отобразить весь сетевой трафик по протоколу НТТР</li>
+<li><code>tcp.port=23 || tcp.port=21</code> Отобразить сетевой трафик по протоколу Telnet или FTP</li>
+</ul>
+<h1 id="_6">Статистика и преобразование</h1>
+<h2 id="_7">Узлы и диалоги между ними</h2>
+<p>Узнать конченые точки (узлы): <strong>Statistics &gt; Endpoints</strong>
+- Name resolution (Преобразование имен)
+- Limit to display filter будут отображаться только те точки, которые удовлетворяют фильтру отображения</p>
+<p>Узнать диалоги между конечными точками (узлами): <strong>Statistics &gt; Conversations</strong>
+- A - отправитель, B - получатель</p>
+<p>Устройство, вызвавшее самый интенсивный обмен данными в перехваченном трафике, называется наиболее активным сетевым узлом (<strong>top talker</strong>). С помощью WHOIS-сервиса можно узнать, кому принадлежит адрес, если он внешний (межсетевой).</p>
+<h2 id="_8">Иерархия сетевых протоколов</h2>
+<p><strong>Statistics &gt; Protocol Hierarchy</strong>
+- В процентах можно увидеть, какая доля трафика приходится на каждый протокол.</p>
+<h2 id="_9">Преобразование имен</h2>
+<p><strong>Edit &gt; Preferences &gt; Name Resolution</strong>
+- Поставить галочки на MAC addresses, transport names, network addresses.</p>
+<p>Либо можно нажать на отдельный пакет правой кнопкой мыши &gt; <strong>Edit Resolved Name</strong> и указать нужное нам имя (оно не сохранится после закрытия программы).</p>
+<h2 id="_10">Дешифрование сетевых протоколов</h2>
+<p>Правой кнопкой мыши по пакету &gt; Decode As &gt; составить новое правило, например, 
+<code>TCP port 443 Integer, base 10 TLS, FTP</code>.</p>
+<h2 id="_11">Отслеживание потоков</h2>
+<p>Выписка из пакетов сортирует данные с целью упростить просмотр пакетов от клиента к серверу.</p>
+<ul>
+<li>Поток TCP (http, ftp);</li>
+<li>Поток UDP (dns);</li>
+<li>Поток SSL (где шифруется);</li>
+<li>Поток HTTP.</li>
+</ul>
+<p>Правой кнопкой мыши по пакету &gt; Follow &gt; ... Stream</p>
+<ul>
+<li>красным текст - от отправителя к получателю;</li>
+<li>синим - сетевой трафик от получателя к отправителю.</li>
+</ul>
+<h2 id="_12">Длина пакетов</h2>
+<p><strong>Statistics &gt; Packet Lengths</strong> 
+- Обычный размер фрейма в сети Ethernet 1518 ( без заголовка 1460 байт). Если больше половины пакетов имеют длину пакетов выше 1280, то можно предположить, что в такой сети передается большой объем данных. Если меньше, то перехваченный трафик состоит из команд управления сетевыми протоколами.</p>
+<h2 id="_13">Составление графиков</h2>
+<p><strong>Statistics &gt; IO Graph</strong>
+- Время круговой передачи (Round-Trip Time, RTT) - время, которое требуется на получение подтверждения доставки пакета адресату.</p>
+<p><strong>Statistics &gt;TCP Stream Graphs &gt; Round Trip Time</strong>
+- По оси Y можно выявить большие величины времени задержки (с точки зрения пропускной способности сети)</p>
+<p><strong>Statistics &gt; Flow Graph</strong>
+- График потоков наглядно демонстрирует запросы и ответы. полезен и для понимания обычного потока данных.</p>
+<h2 id="_14">Экспертная информация</h2>
+<p><strong>Analyze &gt; Expert lnformation</strong></p>
+<p>Cостояния в пакетах протокола:</p>
+<ol>
+<li>Chat (Текстовый диалог); </li>
+<li>Note (Уведомление);</li>
+<li>Warning (Предупреждение); </li>
+<li>Error (Ошибка).</li>
+</ol>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
