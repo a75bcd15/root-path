@@ -18,7 +18,7 @@
 
     
  
-<title>Docker - Root Path</title>
+<title>Ip telephony - Root Path</title>
 
 
 <link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -108,17 +108,9 @@
                 
                 <li property="itemListElement" typeof="ListItem">
                     <a href="../../" class="menu-item " property="item" typeof="WebPage">
-                        <span property="name">Linux</span>
+                        <span property="name">Телефония</span>
                     </a>
                     <meta property="position" content="2">
-                </li>
-                
-                
-                <li property="itemListElement" typeof="ListItem">
-                    <a href="../../../sec/" class="menu-item " property="item" typeof="WebPage">
-                        <span property="name">Безопасность</span>
-                    </a>
-                    <meta property="position" content="3">
                 </li>
                 
                     
@@ -129,7 +121,7 @@
     <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
         <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
     </a>
-    <meta property="position" content="4">
+    <meta property="position" content="3">
 </li>
                     
             </ul>
@@ -174,134 +166,20 @@
     
         
         
-            <a class="terminal-mkdocs-side-nav-item" href="../../">Linux</a>
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Телефония</a>
         
     
     
     
        </li>
         
-          <li class="terminal-mkdocs-side-nav-li">
-    
-    
-    
-        
-        
-            <a class="terminal-mkdocs-side-nav-item" href="../../../sec/">Безопасность</a>
-        
-    
-    
-    
-       </li>
-        
-    </ul>
-</nav><hr>
-<nav>
-    <ul>
-        <li><a href="#_1">Теория</a></li>
-        <li><a href="#_2">Установка</a></li>
-        <li><a href="#_3">Команды</a></li>
-        <li><a href="#_4">Образы</a></li><li><a href="#_5">Контейнеры</a></li><li><a href="#_6">Проверка состояния</a></li><li><a href="#_7">Очистка системы</a></li>
     </ul>
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <p><strong>Docker</strong></p>
-<h2 id="_1">Теория</h2>
-<ol>
-<li><strong>Dockerfile</strong> - текстовый файл-инструкция, который описывает, как собрать образ (какая ОС, какие пакеты установить, какие файлы скопировать, какую команду запускать).</li>
-<li><strong>Образ (Image)</strong> - готовый неизменяемый шаблон, собранный из Dockerfile. Аналог <code>.iso</code> файла и хранится на диске.</li>
-<li><strong>Контейнер (Container)</strong> - запущенный экземпляр образа. Это изолированный процесс в системе. Контейнеров может быть много от одного образа.</li>
-</ol>
-<p><em>Dockerfile -&gt; (build) -&gt; Image -&gt; (run) -&gt; Container</em></p>
-<h2 id="_2">Установка</h2>
-<ol>
-<li>Установка пакета: <code>sudo pacman -S docker</code></li>
-<li>Запуск и включение сервиса: <code>sudo systemctl enable --now docker</code></li>
-<li>Настройка прав: <code>sudo usermod -aG docker $USER</code></li>
-<li>Проверка:</li>
-</ol>
-<pre><code class="language-bash">docker --version
-docker run hello-world
-</code></pre>
-<p>Docker хранит все данные (образы, контейнеры, volumes) в директории: <code>/var/lib/docker/</code>. </p>
-<h2 id="_3">Команды</h2>
-<h3 id="_4">Образы</h3>
-<ul>
-<li>Скачать образ из Docker Hub:</li>
-</ul>
-<pre><code class="language-bash">docker pull &lt;образ&gt;:&lt;тег&gt;
-</code></pre>
-<ul>
-<li>Удалить образ:</li>
-</ul>
-<pre><code class="language-bash">docker rmi &lt;образ&gt;:&lt;тег&gt;
-</code></pre>
-<ul>
-<li>Собрать образ из Dockerfile:</li>
-</ul>
-<pre><code class="language-bash">docker build -t &lt;имя_образа&gt;:&lt;тег&gt; &lt;путь_к_Dockerfile&gt;
-</code></pre>
-<h3 id="_5">Контейнеры</h3>
-<ul>
-<li>Запустить контейнер из образа:</li>
-</ul>
-<pre><code class="language-bash">docker run -d --name &lt;имя&gt; &lt;образ&gt;
-# -d: daemon mode (фоновый режим)
-# --name: задать имя
-</code></pre>
-<ul>
-<li>Запустить существующий контейнер:</li>
-</ul>
-<pre><code class="language-bash">docker start pg
-</code></pre>
-<ul>
-<li>Посмотреть логи контейнера:</li>
-</ul>
-<pre><code class="language-bash">docker logs &lt;имя_или_id&gt;
-docker logs -f &lt;имя_или_id&gt; # следить за логами в реальном времени
-</code></pre>
-<ul>
-<li>Зайти внутрь работающего контейнера (bash):</li>
-</ul>
-<pre><code class="language-bash">docker exec -it &lt;имя_или_id&gt; /bin/bash
-# или /bin/sh, если bash нет
-</code></pre>
-<ul>
-<li>Остановить контейнер:</li>
-</ul>
-<pre><code class="language-bash">docker stop &lt;имя_или_id&gt;
-</code></pre>
-<ul>
-<li>Удалить контейнер:</li>
-</ul>
-<pre><code class="language-bash">docker rm &lt;имя_или_id&gt;
-# docker rm -f &lt;имя&gt;
-</code></pre>
-<h3 id="_6">Проверка состояния</h3>
-<ul>
-<li>Список образов:</li>
-</ul>
-<pre><code class="language-bash">docker images
-</code></pre>
-<ul>
-<li>Запущенные контейнеры:</li>
-</ul>
-<pre><code class="language-bash">docker ps
-# docker ps -a - все контейнеры (включая остановленные)
-</code></pre>
-<h3 id="_7">Очистка системы</h3>
-<ul>
-<li>Удалить всё неиспользуемое (остановленные контейнеры, пустые сети):</li>
-</ul>
-<pre><code class="language-bash">docker system prune
-</code></pre>
-<ul>
-<li>Удалить всё, включая неиспользуемые образы и volumes</li>
-</ul>
-<pre><code class="language-bash">docker system prune -a --volumes
-</code></pre>
+    <p><strong>Кратко об IP-телефонии</strong></p>
+<p><strong>IP-телефония</strong> — телефонная связь по протоколу IP. Под IP-телефонией подразумевается набор коммуникационных протоколов, технологий и методов, обеспечивающих традиционные для телефонии набор номера, дозвон и двустороннее голосовое общение. Сигнал по каналу связи передаётся в цифровом виде и, как правило, перед передачей преобразовывается (сжимается), чтобы удалить избыточность информации и снизить нагрузку на сеть передачи данных. <a href="https://ru.wikipedia.org/wiki/IP-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B8%D1%8F">[1]</a></p>
 </section>
 
             </main>
