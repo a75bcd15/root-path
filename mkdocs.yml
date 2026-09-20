@@ -6,5 +6,36 @@ theme:
 nav:
   - Главная: 'index.md'
   - Сети: 'net/index.md'
-  - Linux: 'uwu/index.md'
-  - Безопасность: 'sec/index.md'
+  - Телефония: 'voip/index.md'
+
+# ----------------------------------
+#
+# DEVELOP ВЕТКА
+#
+# 1 Python Virtual Environment
+#
+# sudo apt install python3-venv python3-pip -y
+# python3 -m venv .venv
+#
+# source .venv/bin/activate
+#
+# pip install mkdocs mkdocs-terminal
+# 
+# 2 MkDocs
+# 
+# mkdocs --version
+# mkdocs serve - запуск локального сервера
+# mkdocs build - сборка в папку site
+#
+# 3 git add & git commit
+#
+# ----------------------------------
+#
+# MAIN ВЕТКА
+# 
+# git merge develop & git push
+# 
+# mkdocs gh-deploy
+# 
+# deactivate 
+#
