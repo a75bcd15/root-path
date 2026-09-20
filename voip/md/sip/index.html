@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Sip - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Телефония</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Телефония</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Структура</a></li>
+        <li><a href="#requests">Запросы (Requests)</a></li>
+        <li><a href="#responses">Ответы (Responses)</a></li>
+        <li><a href="#1">Схема 1: Регистрация на сервере</a></li>
+        <li><a href="#2">Схема 2: Успешный звонок</a></li><li><a href="#3">Схема 3: Отмена вызова до ответа</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p><strong>Протокол SIP (Session Initiation Protocol)</strong></p>
+<p>Современный стандарт протокола — <strong>SIP 2.0</strong>. Основной документ, который его описывает и регламентирует — <a href="https://datatracker.ietf.org/doc/html/rfc3261"><strong>RFC 3261</strong></a>. SIP работает на прикладном уровне модели OSI. Для доставки SIP-сообщений чаще всего используется протокол UDP (порт 5060 или 60000), но также могут применяться TCP (порт 5060) и зашифрованный TLS (порт 5061).</p>
+<hr />
+<h1 id="_1">Структура</h1>
+<p><strong>SIP</strong> — это текстовый протокол (ASCII), очень похожий по своей структуре и логике на HTTP. Любое SIP-сообщение состоит из трех основных частей:</p>
+<p>[ Стартовая строка (Start-line) ] -&gt; Описание запроса или статус ответа
+[ Заголовки (SIP Headers)       ] -&gt; Метаданные (кто, кому, как передавать)
+[ Пустая строка (\r\n)          ] -&gt; Разделитель
+[ Тело сообщения (Message Body) ] -&gt; Обычно описание медиапотока через SDP</p>
+<p><strong>Заголовки в SIP-пакете:</strong></p>
+<ul>
+<li><code>Via:</code> — содержит путь (IP и порт), пройденный запросом. Используется для маршрутизации ответов назад.</li>
+<li><code>From:</code> — логический инициатор запроса (кто звонит). Содержит SIP URI и уникальный тег <code>tag</code>.</li>
+<li><code>To:</code> — логический получатель запроса (кому звонят). Содержит SIP URI.</li>
+<li><code>Call-ID:</code> — уникальный глобальный идентификатор конкретного звонка/сессии. Связывает все запросы и ответы в рамках одного диалога.</li>
+<li><code>CSeq:</code> (Command Sequence) — порядковый номер запроса и имя метода (например, 1 INVITE). Помогает упорядочить сообщения.</li>
+<li><code>Max-Forwards:</code> — счетчик (обычно 70), ограничивающий количество транзитных узлов (прокси), которые может пройти пакет, для защиты от зацикливания.</li>
+<li><code>Contact:</code> — прямой URI для связи с конкретным устройством. Именно на этот адрес отправляются последующие запросы в рамках диалога (в обход промежуточных прокси).</li>
+<li><code>Content-Type:</code> — тип данных в теле сообщения (чаще всего <code>application/sdp</code>).</li>
+<li><code>Content-Length:</code> — длина тела сообщения в байтах.</li>
+</ul>
+<hr />
+<p>Все сообщения SIP делятся на два типа: Запросы (Requests) и Ответы (Responses).</p>
+<h1 id="requests">Запросы (Requests)</h1>
+<p><strong>Основные запросы (Методы):</strong></p>
+<ul>
+<li><code>REGISTER</code> — устройство передает серверу (Registrar) свой текущий IP-адрес для регистрации в сети.</li>
+<li><code>INVITE</code> — инициация сессии (приглашение к разговору, звонок).</li>
+<li><code>ACK</code> — подтверждение от вызывающей стороны, что окончательный ответ на INVITE получен.</li>
+<li><code>BYE</code> — завершение разговора (повесили трубку на одной из сторон).</li>
+<li><code>CANCEL</code> — отмена еще не установленного вызова (вызывающий нажал «отбой» до того, как ему ответили).</li>
+<li><code>OPTIONS</code> — запрос поддерживаемых функций и проверка доступности сервера («пинг» на уровне SIP).</li>
+</ul>
+<h1 id="responses">Ответы (Responses)</h1>
+<p>Ответы состоят из 3-значного цифрового кода и текстового пояснения:</p>
+<ul>
+<li>1xx (Информационные) — запрос обрабатывается, звонок идет. (Пример: <code>100 Trying</code> — пытаюсь связаться, <code>180 Ringing</code> — идет гудок).</li>
+<li>2xx (Успех) — запрос успешно выполнен. (Пример: <code>200 OK</code> — трубку сняли или регистрация успешна).</li>
+<li>3xx (Перенаправление) — требуется перенаправить вызов на другой URI.</li>
+<li>4xx (Ошибка клиента) — запрос содержит ошибку или не может быть выполнен. (Пример: <code>401 Unauthorized</code> — нужна авторизация, <code>404 Not Found</code> — номер не найден).</li>
+<li>5xx (Ошибка сервера) — сервер не может обработать корректный запрос. (Пример: <code>503 Service Unavailable</code>).</li>
+<li>6xx (Глобальная ошибка) — вызов не может быть выполнен ни на одном сервере. (Пример: <code>603 Decline</code> — абонент отклонил вызов).</li>
+</ul>
+<hr />
+<h1 id="1">Схема 1: Регистрация на сервере</h1>
+<p>Процесс авторизации софтфона или телефона на АТС:</p>
+<pre><code>    Абонент (Телефон)                     Сервер (АТС)
+
+           |                                   |
+           |------- 1. REGISTER --------------&gt;| (Попытка регистрации без пароля)
+           |&lt;------ 2. 401 Unauthorized -------| (Сервер требует авторизацию и шлет nonce)
+           |                                   |
+           |------- 3. REGISTER --------------&gt;| (Повторный запрос с хэшем пароля)
+           |&lt;------ 4. 200 OK -----------------| (Успешная регистрация)
+</code></pre>
+<h2 id="2">Схема 2: Успешный звонок</h2>
+<p>Классическая схема установления соединения и завершения разговора.</p>
+<pre><code>    Вызывающий (А)                        Вызываемый (Б)
+
+           |                                   |
+           |------- 1. INVITE ----------------&gt;| (Хочу позвонить, внутри SDP)
+           |&lt;------ 2. 100 Trying -------------| (Запрос обрабатывается)
+           |&lt;------ 3. 180 Ringing ------------| (У абонента Б идет гудок)
+           |                                   |
+           |&lt;------ 4. 200 OK -----------------| (Абонент Б снял трубку, внутри SDP)
+           |------- 5. ACK -------------------&gt;| (Подтверждение соединения)
+           |                                   |
+           | &lt;======= МЕДИАПОТОК RTP ========&gt; | (Идет разговор абонентов)
+           |                                   |
+           |                                   | (Абонент Б вешает трубку)
+           |&lt;------ 6. BYE --------------------| (Завершение сессии)
+           |------- 7. 200 OK ----------------&gt;| (Подтверждение закрытия)
+</code></pre>
+<h1 id="3">Схема 3: Отмена вызова до ответа</h1>
+<p>Ситуация, когда абонент А передумал звонить, пока у абонента Б играла мелодия вызова.</p>
+<pre><code>    Вызывающий (А)                        Вызываемый (Б)
+
+           |                                   |
+           |------- 1. INVITE ----------------&gt;| (Звонок)
+           |&lt;------ 2. 180 Ringing ------------| (Идет гудок)
+           |                                   |
+           |------- 3. CANCEL ----------------&gt;| (Абонент А нажал отмену)
+           |&lt;------ 4. 200 OK (на CANCEL) -----| (Сервер подтвердил отмену запроса)
+           |&lt;------ 5. 487 Request Terminated -| (INVITE официально закрыт по отмене)
+           |------- 6. ACK (на 487) ----------&gt;| (Подтверждение закрытия INVITE)
+
+</code></pre>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Codec - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Телефония</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Телефония</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Кодек</a></li>
+        <li><a href="#_2">Другие характеристики звука</a></li>
+        <li><a href="#jitter">Jitter</a></li>
+        <li><a href="#qos">Качество обслуживания (QoS)</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p><strong>Передача звука в IP-телефонии</strong></p>
+<p>Прежде чем голосовой трафик отправится в сеть, непрерывный аналоговый звуковой сигнал (голос человека) необходимо превратить в цифровые данные, сжать и подготовить к передаче. За этот процесс отвечают кодеки и математические алгоритмы обработки звука.</p>
+<hr />
+<h1 id="_1">Кодек</h1>
+<p>Слово Кодек (Codec) произошло от сокращения COder/DECoder (Кодировщик/Декодировщик). Это программный алгоритм или микросхема, выполняющая две задачи:</p>
+<ol>
+<li>На стороне передатчика (Coder): Математически преобразует аналоговый сигнал от микрофона в цифровой поток (нули и единицы) и сжимает его для экономии сетевого трафика.</li>
+<li>На стороне приемника (Decoder): Принимает цифровые пакеты, распаковывает их и превращает обратно в аналоговый сигнал, который подается в динамик телефона или гарнитуры.</li>
+</ol>
+<p>Главная цель кодека — найти идеальный баланс между качеством звучания голоса и объемом сетевого трафика (полосой пропускания), который этот кодек занимает.</p>
+<p><strong>Эволюция кодеков в телефонии.</strong></p>
+<p>Исторически развитие кодеков шло от простой оцифровки медных телефонных линий к сложнейшим адаптивным алгоритмам для интернета.</p>
+<ol>
+<li>Эра PSTN (Традиционная телефония): Создание стандарта <strong>G.711</strong>. Звук оцифровывался «как есть» без сложного сжатия. Полоса 64 кбит/с стала эталоном качества обычной телефонной сети (toll quality).</li>
+<li>Эра узкого интернет-канала (Ранний VoIP): Интернет был медленным (Dial-up, первые ADSL). Появилась острая необходимость сжимать голос. Были созданы тяжелые математические кодеки вроде <strong>G.729</strong>, которые урезали поток в 8 раз (до 8 кбит/с) ценой некоторой естественности голоса (появился «металлический» оттенок).</li>
+<li>Эра широкополосного интернета (Современный VoIP): Ограничения по скорости сети отпали. Фокус сместился на HD-качество звука и устойчивость к потерям пакетов. Появились широкополосные кодеки (Голос высокой четкости / HD Voice) — <strong>G.722</strong>, а затем и революционный адаптивный кодек <strong>Opus</strong>.</li>
+</ol>
+<p><strong>Сравнение упомянутых кодеков:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Название кодека</th>
+<th>Полоса (Bitrate)</th>
+<th>Частота дискретизации</th>
+<th>Описание и применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G.711 (PCMA / PCMU)</td>
+<td>64 кбит/с</td>
+<td>8 кГц (Narrowband)</td>
+<td>«Золотой стандарт». PCMA (A-law) используется в Европе/РФ, PCMU (u-law) — в США/Японии. Не требует мощного процессора, дает классическое телефонное качество, но ест много трафика.</td>
+</tr>
+<tr>
+<td>G.729 (A/B)</td>
+<td>8 кбит/с</td>
+<td>8 кГц (Narrowband)</td>
+<td>Сверхсжатый кодек. Идеален для экономии трафика или при очень плохом интернете. Голос звучит глуховато («как из танка»).</td>
+</tr>
+<tr>
+<td>G.722</td>
+<td>64 кбит/с</td>
+<td>16 кГц (Wideband)</td>
+<td>Широкополосный кодек HD Voice. При той же нагрузке на сеть, что и G.711, звучит в разы чище, сочнее и детальнее за счет расширенного диапазона частот.</td>
+</tr>
+<tr>
+<td>Opus</td>
+<td>от 6 до 510 кбит/с</td>
+<td>от 8 до 48 кГц (Fullband)</td>
+<td>Самый продвинутый открытый кодек. Используется в WebRTC (Telegram, WhatsApp, Discord, современные АТС). Динамически подстраивается под качество интернета: если сеть плохая — сжимает звук, если идеальная — выдает студийное качество.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_2">Другие характеристики звука</h1>
+<p>Помимо выбора кодека, на качество медиаданных влияют следующие физические параметры:</p>
+<ul>
+<li>Частота дискретизации (Sampling Rate): Количество замеров уровня аналогового сигнала в секунду. Измеряется в Герцах (Гц).</li>
+<li>Narrowband (Узкая полоса, 8 кГц): Обрезает всё, что выше 4 кГц. Этого достаточно, чтобы разобрать слова, но голос теряет индивидуальные краски.</li>
+<li>Wideband (Широкая полоса, 16 кГц): Передает более высокие и низкие частоты. Собеседника слышно так, будто он стоит рядом.</li>
+<li>Разрядность квантования (Bit Depth): Точность каждого отдельного замера. В телефонии стандарт — 8 бит или 16 бит.</li>
+<li>Пакетный интервал (Ptime): Время, за которое кодек собирает звук перед отправкой его в один сетевой пакет. Стандарт для VoIP — 20 мс. Если ptime увеличить (например, до 40 мс), трафика станет чуть меньше (меньше заголовков), но вырастет задержка звука.</li>
+</ul>
+<hr />
+<h1 id="jitter">Jitter</h1>
+<p>Звук в IP-сети передается в виде цепочки пакетов. В идеальном мире пакеты вылетают с интервалом в 20 мс и прилетают ровно через каждые 20 мс. В реальности из-за загруженности роутеров пакеты могут задерживаться в пути.</p>
+<p><strong>Джиттер (Jitter / Фазовое дрожание)</strong> — это колебание или разброс во времени доставки сетевых пакетов.</p>
+<p>Например, первый пакет летел 10 мс, второй — 50 мс, третий — 5 мс. Если бы телефон воспроизводил их сразу по прилету, речь собеседника постоянно то ускорялась бы, то замедлялась (звучала бы «рывками»). В SIP-телефонах и АТС на программном уровне создается <strong>Джиттер-буфер</strong> (Jitter Buffer). Это небольшая область памяти («очередь»), которая придерживает первые прилетевшие пакеты (например, на 40-60 мс), выстраивает их по порядку и выдает в динамик с одинаковым ровным интервалом.</p>
+<p><strong>Нормальные значения для VoIP:</strong></p>
+<ul>
+<li>Jitter &lt; 20-30 мс — Отлично. Человеческое ухо не заметит никаких искажений.</li>
+<li>Jitter 30-50 мс — Приемлемо. Джиттер-буфер справляется, но задержка ответа может стать чуть ощутимее.</li>
+<li>Jitter &gt; 50 мс — Плохо. Буфер начинает «раздуваться» (появляется явная задержка речи), либо пакеты, опоздавшие слишком сильно, просто выбрасываются (появляются заикания и пропадание слогов).</li>
+</ul>
+<hr />
+<h1 id="qos">Качество обслуживания (QoS)</h1>
+<p>Поскольку IP-сеть изначально не проектировалась под передачу голоса в реальном времени, медиаданные нужно защищать от других задач пользователей в рамках одной сети, например, скачивания файлов или просмотра веб-страниц.</p>
+<p>Для измерения качества речи используется метрика <strong>MOS (Mean Opinion Score)</strong> — усредненная экспертная оценка по шкале от 1 до 5:</p>
+<ul>
+<li>5 — Идеальное студийное качество.</li>
+<li>4.0 - 4.4 — Стандартное хорошее качество для кодека G.711 (чистый телефонный разговор).</li>
+<li>3.5 — Нижняя граница нормы. Слышны шумы или небольшие искажения, но всё понятно.</li>
+<li>&lt; 3.0 — Неприемлемое качество. Разговаривать невозможно, слова пропадают.</li>
+</ul>
+<p>Механизмы QoS (Quality of Service). Чтобы роутер не тормозил звонки, настраивают приоритезацию трафика:</p>
+<ul>
+<li>L2 QoS (802.1p/Q): Тегирование трафика на уровне коммутаторов (VLAN). Голосовому VLAN задается наивысший приоритет.</li>
+<li>L3 QoS (DiffServ / DSCP): Маркировка самих IP-пакетов. Для SIP-сигнализации в заголовке IP выставляется маркер DSCP CS3 или AF31, а для голосовых пакетов — DSCP EF (Expedited Forwarding). Роутер, видя пакет с меткой EF, всегда продвигает его в начало очереди на выход, даже если канал забит другим трафиком.</li>
+</ul>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

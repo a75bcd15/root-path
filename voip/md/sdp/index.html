@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Sdp - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Телефония</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Телефония</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#offeranswer">Модель Offer/Answer (Предложение / Ответ)</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p><strong>Протокол SDP</strong></p>
+<p><strong>SDP (Session Description Protocol)</strong> — это протокол описания сессии. Его главный стандарт регламентируется документом <a href="https://datatracker.ietf.org/doc/html/rfc4566"><strong>RFC 4566</strong></a>.</p>
+<p>SDP является декларативным языком описания параметров связи. В IP-телефонии он почти всегда находится внутри тела (<code>Message Body</code>) SIP-запросов, а заголовок SIP <code>Content-Type</code> при этом принимает значение <code>application/sdp</code>.</p>
+<p>SDP-текст состоит из строк вида <code>&lt;тип&gt;=&lt;значение&gt;</code>, где <code>&lt;тип&gt;</code> — это всегда одна латинская буква, а регистр имеет строгое значение. Внутри блока строки должны идти в строго определенном порядке.
+Все параметры делятся на три уровня: описание сессии (общие данные), описание времени и описание медиапотока (звук или видео).</p>
+<p><strong>Пример SDP-блока внутри SIP-пакета:</strong></p>
+<pre><code>v=0
+o=IP-Phone 289472 289472 IN IP4 192.168.1.50
+s=VoIP-Call
+c=IN IP4 192.168.1.50
+t=0 0
+m=audio 40002 RTP/AVP 8 0 101
+a=rtpmap:8 PCMA/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=sendrecv
+</code></pre>
+<p><strong>1. Описание сессии (Session Level)</strong></p>
+<ul>
+<li><code>v=</code> (Protocol Version): Версия SDP. На данный момент всегда равна 0.</li>
+<li><code>o=</code> (Owner/Creator): Инициатор сессии и уникальный идентификатор. Синтаксис: <code>o=&lt;имя_пользователя&gt; &lt;id_сессии&gt; &lt;версия_сессии&gt; &lt;тип_сети&gt; &lt;тип_адреса&gt; &lt;IP_адрес&gt;</code></li>
+<li><code>s=</code> (Session Name): Имя сессии. Если имя не задано, обычно пишут просто <code>s=-</code> или <code>s=VoIP-Call</code>.</li>
+<li><code>c=</code> (Connection Information): Указывает сетевой адрес, на который удаленная сторона должна отправлять медиатрафик (RTP). Именно здесь кроется проблема «односторонней слышимости», если в поле <code>c=</code> из-за NAT попадает серый локальный IP-адрес вместо белого.</li>
+</ul>
+<p><strong>2. Описание времени (Time Level)</strong></p>
+<ul>
+<li><code>t=</code> (Timing): Время начала и окончания сессии. Для обычных телефонных звонков, которые создаются «здесь и сейчас» и длятся неопределенно, всегда устанавливается в <code>t=0 0</code>.</li>
+</ul>
+<p><strong>3. Описание медиапотока (Media Level)</strong></p>
+<ul>
+<li><code>m=</code> (Media Descriptions): Ключевое поле, объявляющее тип трафика и порты. Синтаксис: <code>m=&lt;тип_медиа&gt; &lt;порт&gt; &lt;протокол&gt; &lt;форматы/кодеки&gt;</code>. Примечание: <code>8 0 101</code> — список поддерживаемых кодеков в порядке приоритета (<code>8</code> — это G.711a, <code>0</code> — G.711u, <code>101</code> — DTMF-сигналы).</li>
+<li><code>a=</code> (Attributes): Дополнительные свойства (атрибуты), расширяющие поле <code>m=</code>. Синтаксис: <code>a=rtpmap:&lt;код&gt; &lt;кодек&gt;/&lt;частота&gt;</code> — расшифровка кодеков. </li>
+</ul>
+<h1 id="offeranswer">Модель Offer/Answer (Предложение / Ответ)</h1>
+<p>Обмен SDP-данными между АТС и телефонами строго следует модели <strong>Offer/Answer</strong> <a href="https://datatracker.ietf.org/doc/html/rfc3264"><strong>(RFC 3264)</strong></a>. Собеседники должны прийти к консенсусу (согласовать общий кодек и порты).</p>
+<ol>
+<li>Offer (Предложение): Вызывающая сторона (А) отправляет <code>INVITE</code> со своим списком кодеков.</li>
+<li>Answer (Ответ): Вызываемая сторона (Б) в пакете <code>200 OK</code> присылает свой встречный SDP, выбирая то, что она тоже поддерживает.</li>
+</ol>
+<p>После этого обмена обе стороны точно знают, куда слать RTP-пакеты и с помощью какого алгоритма их кодировать/декодировать.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

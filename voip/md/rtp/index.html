@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.8.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Rtp - Root Path</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- pink color palette -->
+<link href="../../../css/palettes/pink.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">Root Path</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Главная</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../net/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Сети</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Телефония</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../..">Главная</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../../net/">Сети</a>
+        
+    
+    
+    
+       </li>
+        
+          <li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="terminal-mkdocs-side-nav-item" href="../../">Телефония</a>
+        
+    
+    
+    
+       </li>
+        
+    </ul>
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#1-p2p-point-to-point">Схема 1: Классический двусторонний звонок (P2P / Point-to-Point)</a></li>
+        <li><a href="#2-proxy-mode">Схема 2: Звонок через АТС (Proxy Mode / Запись разговора)</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <p><strong>Протокол RTP</strong></p>
+<p><strong>RTP (Real-time Transport Protocol)</strong> — это специализированный сетевой протокол прикладного уровня, предназначенный для передачи аудио и видео в реальном времени. Его спецификация описана в документе <a href="https://datatracker.ietf.org/doc/html/rfc3550"><strong>RFC 3550</strong></a>. </p>
+<p>RTP работает строго поверх UDP. В реальном времени нет смысла использовать TCP: если пакет с кусочком звука потерялся, его повторная отправка займет слишком много времени и долетит до уха уже невпопад. Проще этот пакет проигнорировать (джиттер-буфер сгладит потерю). RTP использует динамические четные UDP-порты (обычно из диапазона 10000–20000 или 16384–32768). Конкретный номер порта согласовывается индивидуально для каждого звонка на этапе обмена SDP-заголовками. Каждая RTP-сессия сопровождается контрольным <strong>протоколом RTCP (RTP Control Protocol)</strong>. RTCP использует следующий нечетный порт (например, если RTP идет по порту 40002, то RTCP займет порт 40003). Он не передает голос, а собирает статистику о качестве связи: потерях пакетов, джиттере и задержках (RTT).</p>
+<p><strong>Структура и заголовки пакета RTP</strong></p>
+<p>RTP-пакет инкапсулируется внутрь UDP-датаграммы. Минимальный размер фиксированного заголовка RTP составляет 12 байт.</p>
+<ol>
+<li><code>V</code> (Version, 2 бита): Версия протокола. В современном VoIP всегда равна 2.</li>
+<li><code>P</code> (Padding, 1 бит): Флаг выравнивания. Если установлен, в конце пакета добавлены пустые байты для дополнения до нужного размера блока (например, при шифровании).</li>
+<li><code>X</code> (Extension, 1 бит): Флаг расширения. Показывает, присутствуют ли за фиксированным заголовком дополнительные кастомные заголовки.</li>
+<li><code>CC</code> (CSRC Count, 4 бита): Количество идентификаторов CSRC (используется, если звук идет от микшера, объединяющего несколько источников в конференцию). Для обычного звонка равно 0.</li>
+<li><code>M</code> (Marker, 1 бит): Маркер. Имеет значение для конкретного профиля трафика. В телефонии часто отмечает первый пакет аудио после паузы/тишины (при включенном механизме подавления тишины VAD).</li>
+<li><code>PT</code> (Payload Type, 7 бит): Тип полезной нагрузки. Указывает, какой именно кодек использован для сжатия голоса в данном пакете. Примеры фиксированных кодов: 0 — G.711 u-law (PCMU), 8 — G.711 a-law (PCMA), 18 — G.729. Динамические кодеки (например, Opus) используют значения из диапазона 96–127, которые предварительно описываются в SDP.</li>
+<li><code>Sequence Number</code> (Порядковый номер, 16 бит): Инкрементируется (увеличивается на 1) с каждым отправленным пакетом. Стартовое число выбирается случайно.</li>
+<li><code>Timestamp</code> (Временная метка, 32 бита): Отражает момент времени, в который был сделан первый замер звука, вошедший в этот пакет. Стартовое значение тоже выбирается случайно. Шаг временной метки привязан к частоте дискретизации кодека. Например, для кодека G.711 (8000 Гц) при отправке пакетов каждые 20 мс (0.02 секунды), Timestamp каждого следующего пакета будет увеличиваться ровно на: 8000 × 0.02 = 160 единиц. Это помогает джиттер-буферу воспроизводить звук плавно, без рывков, рассчитывая точные интервалы между пакетами, независимо от сетевых задержек.</li>
+<li><code>SSRC</code> (Synchronization Source, 32 бита): Уникальный случайный идентификатор источника синхронизации (конкретного устройства/микрофона в текущей сессии). Помогает отличить один медиапоток от другого в рамках одного сетевого соединения (например, если на один порт прилетает трафик от двух участников конференции).</li>
+</ol>
+<hr />
+<h1 id="1-p2p-point-to-point">Схема 1: Классический двусторонний звонок (P2P / Point-to-Point)</h1>
+<p>После согласования сессии через АТС (по протоколу SIP), телефоны часто отправляют RTP-трафик напрямую друг другу, минуя сервер, чтобы снизить на него нагрузку (если это не запрещено настройками АТС или NAT).</p>
+<pre><code>    Телефон А (192.168.1.50)                           Телефон Б (192.168.2.30)
+      [RTP Порт: 14002]                                  [RTP Порт: 18006]
+
+             |                                                  |
+             |======== RTP Поток (Кодек G.711a, PT=8) =========&gt;| (А шлет на Б:18006)
+             |        Seq=1001, Timestamp=160                   |
+             |        Seq=1002, Timestamp=320                   |
+             |                                                  |
+             |&lt;======= RTP Поток (Кодек G.711a, PT=8) ==========| (Б шлет на А:14002)
+             |        Seq=5504, Timestamp=160                   |
+             |        Seq=5505, Timestamp=320                   |
+             |                                                  |
+             | - - - - RTCP Статистика (каждые ~5 сек) - - - - &gt;| (Порт 14003 -&gt; 18007)
+             |&lt; - - - - RTCP Статистика (каждые ~5 сек) - - - - | (Порт 18007 -&gt; 14003)
+</code></pre>
+<h1 id="2-proxy-mode">Схема 2: Звонок через АТС (Proxy Mode / Запись разговора)</h1>
+<p>Если на АТС включена запись разговоров, перевод вызова или участники находятся за жестким NAT, медиапоток идет строго через сервер телефонии, который выступает в роли ретранслятора (B2BUA).</p>
+<pre><code>    Телефон А                         Сервер (АТС)                         Телефон Б
+
+        |                                  |                                  |
+        |==== RTP (Порт А -&gt; Порт АТС1) ===&gt;|                                  |
+        |                                  |==== RTP (Порт АТС2 -&gt; Порт Б) ===&gt;|
+        |                                  |   [Запись и склейка аудио файлов] |
+        |                                  |&lt;=== RTP (Порт Б -&gt; Порт АТС2) ====|
+        |&lt;=== RTP (Порт АТС1 -&gt; Порт А) ===|                                  |
+
+</code></pre>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
